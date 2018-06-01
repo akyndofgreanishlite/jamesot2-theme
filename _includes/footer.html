@@ -1,0 +1,22 @@
+<footer class="global">
+
+  <div class="inner">
+
+    {% if site.author %}
+    <p>© {{ 'now' | date: "%Y" }} {{ site.author | escape }}, unless otherwise noted.</p>
+    {% endif %}
+
+  </div>
+
+  {% if jekyll.environment != 'production' %}
+  <script src="{{ "/assets/scripts/jquery.min.js" | relative_url }}"></script>
+  {% endif %}
+
+  {% if jekyll.environment == 'production' %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  {% endif %}
+  {% if jekyll.environment != 'production' %}
+  <script src="{{ "/assets/scripts/lightbox.js" | relative_url }}"></script>
+  {% endif %}
+
+</footer>

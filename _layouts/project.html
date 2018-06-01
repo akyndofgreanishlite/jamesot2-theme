@@ -1,0 +1,122 @@
+---
+layout: compress
+---
+
+{% capture html %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | downcase }}{% if page.project %}-{{ page.project }}{% endif %}">
+
+{% include header.html %}
+
+<main class="page-content" aria-label="Content">
+
+<article class="project {{ page.client | downcase }}{% if page.project %}-{{ page.project }}{% endif %}">
+
+  <header class="">
+    <div class="inner">
+      <span class="client">{{ page.client }}</span>
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <!-- <p class="post-meta"></p> -->
+      {% if page.description %}
+        <p>{{ page.description | escape }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="" itemprop="articleBody">
+    {{ content }}
+  </section>
+
+  {% if meta %}
+  <ul class="project-meta">
+    {% for meta in project %}
+    <li>
+      <p>{{ meta.label }}: {{ meta.info }}</p>
+    </li>
+    {% endfor %}
+  {% endif %}
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+
+</article>
+
+<footer class="project-navigation">
+  {% capture the_collection %}{{page.collection}}{% endcapture %}
+    {% if page.collection %}
+      {% assign document = site[the_collection] | sort:'num'  %}
+    {% endif %}
+  <!-- <h1>TITLE: {{ page.title }}</h1> -->
+  {% for links in document  %}
+    {% if links.title == page.title %}
+      {% unless forloop.first %}
+        {% assign prevurl = prev.url %}
+        {% assign prevtitle = prev.title %}
+        {% assign prevclient = prev.client %}
+        {% assign prevdesc = prev.description %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next = document[forloop.index] %}
+        {% assign nexturl = next.url %}
+        {% assign nexttitle = next.title %}
+        {% assign nextclient = next.client %}
+        {% assign nextdesc = next.description %}
+      {% endunless %}
+    {% endif %}
+    {% assign prev = links %}
+  {% endfor %}
+
+  <ul class="project-list">
+
+    {% if nexturl %}
+    <li>
+      <p><span class="direction">Next project</span></p>
+      <span class="project-client">{{ nextclient | escape }}</span>
+      <h2><a class="project-link nxt" href="{{nexturl}}">{{ nexttitle | escape }}</a></h2>
+      <p>{{ nextdesc | escape }}</p>
+    </li>
+    {% endif %}
+
+    {% if prevurl %}
+    <li>
+      <p><span class="direction">Previous project</span></p>
+      <span class="project-client">{{ prevclient | escape }}</span>
+      <h2><a href="{{prevurl}}" class="project-link prv">{{ prevtitle | escape }}</a></h2>
+      <p>{{ prevdesc | escape }}</p>
+    </li>
+    {% endif %}
+
+    <li>
+      <a class="button" href="/#projects">
+        <span>View all projects</span>
+      </a>
+    </li>
+  </ul>
+
+</footer>
+
+{% comment %}
+<script>
+/* post pagination keyboard shortcuts */
+document.body.onkeyup = function(e){
+  if (e.keyCode == '37') { window.location = '{{ prevurl }}'; } // left arrow key
+  if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
+};
+</script>
+{% endcomment %}
+
+</main>
+
+{% include footer.html %}
+
+</body>
+
+</html>
+
+{% endcapture %}{{ html | strip_newlines | replace:'	','' | replace:'    ','' | replace:'  ',' ' }}

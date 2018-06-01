@@ -1,5 +1,56 @@
 # Serving
-port:    5000
+port: 5000
 
-# Build settings
-# markdown: kramdown
+# Site Settings
+theme: jekyll-theme-jamesot2
+# remote_theme: akynodgreanishlite/jamesot2-theme
+
+title: "placeholder title"
+description: "placeholder description"
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+author:
+email:
+baseurl:
+url:
+twitter_username:
+github_username:
+google_analytics:
+
+# Build Settings
+markdown: kramdown
+markdown_ext: markdown,md
+kramdown:
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: false
+  strip_crlf: false
+  js_minifier_options: false
+# compress_html:
+#   blanklines: false
+#   profile: false
+assets:
+  compress:
+    css: true
+    js: true
+# - octopress-minify-html
+# minify_html: true
+exclude:
+- Gemfile
+- Gemfile.lock
+sass:
+  sass_dir: _sass
+  sourcemap: true
+  style: compressed
+permalink: pretty
+incremental: false
+
+plugins:
+- jekyll-feed
+- jekyll-assets
+- uglifier
+- sass

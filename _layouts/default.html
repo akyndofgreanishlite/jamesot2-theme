@@ -3,7 +3,17 @@ layout: compress
 ---
 
 {% capture html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-{{ content }}
+  {% include head.html %}
+
+  <main>
+
+    {{ content }}
+    
+  </main>
+
+</html>
 
 {% endcapture %}{{ html | strip_newlines | replace:'	','' | replace:'    ','' | replace:'  ',' ' }}

@@ -1,0 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  // background-color: red !important;
+}
+
+main {
+  width: 90%;
+  max-width: 36rem;
+}
