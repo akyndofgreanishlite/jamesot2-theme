@@ -1,1 +1,9 @@
+---
+layout: compress
+---
+
+{% capture html %}
+
 {{ content }}
+
+{% endcapture %}{{ html | strip_newlines | replace:'	','' | replace:'    ','' | replace:'  ',' ' }}
