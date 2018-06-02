@@ -1,0 +1,10 @@
+.list-simple {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-project {
+  .project-client + * {
+    margin-top: 0;
+  }
+}
