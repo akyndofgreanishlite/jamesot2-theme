@@ -1,0 +1,6 @@
+.platform {
+  margin-top: $spacing-unit-v * 2;
+  + * {
+    margin-top: 0;
+  }
+}
