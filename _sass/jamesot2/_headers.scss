@@ -1,0 +1,8 @@
+header.global .inner {
+  @extend %content-column;
+  @extend %clearfix;
+
+  a + a {
+    margin-left: 1em;
+  }
+}

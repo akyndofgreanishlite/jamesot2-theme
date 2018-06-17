@@ -1,0 +1,4 @@
+footer.global .inner {
+  @extend %content-column;
+  @extend %clearfix;
+}

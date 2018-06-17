@@ -9,11 +9,9 @@ layout: compress
 
 {% include head.html %}
 
-<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | downcase }}{% if page.project %}-{{ page.project }}{% endif %}">
+<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | handleize }} }}{% if page.project %}-{{ page.project | handleize }}{% endif %}">
 
 {% include header.html %}
-
-<a href="{{ "/projects/" | relative_url}}">Projects</a>
 
 <main class="page-content" aria-label="Content">
 
@@ -74,7 +72,7 @@ layout: compress
     {% assign prev = links %}
   {% endfor %}
 
-  <ul class="project-list">
+  <ul class="list-project">
 
     {% if nexturl %}
     <li>
@@ -115,7 +113,9 @@ document.body.onkeyup = function(e){
 
 </main>
 
+{% comment %}
 {% include footer.html %}
+{% endcomment %}
 
 </body>
 

@@ -1,0 +1,15 @@
+figure {
+  @extend %clearfix;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  @extend %clearfix;
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+figcaption {
+  display: block;
+  text-align: center;
+}

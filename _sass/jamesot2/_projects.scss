@@ -7,3 +7,9 @@
 .project-client + * {
   margin-top: 0;
 }
+
+.project .project-list {
+  li:nth-child(n+2) {
+    margin-top: $spacing-unit-v * 2;
+  }
+}

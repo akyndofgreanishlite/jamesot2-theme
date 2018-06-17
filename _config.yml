@@ -2,7 +2,7 @@
 port: 5000
 
 # Site Settings
-theme: jekyll-theme-jamesot2
+# theme: jekyll-theme-jamesot2
 # remote_theme: akynodgreanishlite/jamesot2-theme
 
 title: "placeholder title"
@@ -11,6 +11,9 @@ timezone: UTC
 collections:
   posts:
     title: Posts
+    output: true
+  projects:
+    title: Projects
     output: true
 author:
 email:
@@ -50,7 +53,7 @@ permalink: pretty
 incremental: false
 
 plugins:
-- jekyll-feed
+# - jekyll-feed
 - jekyll-assets
 - uglifier
 - sass
