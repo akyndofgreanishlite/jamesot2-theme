@@ -5,4 +5,10 @@
 
 .list-project {
   @extend .list-simple;
+  li {
+    @extend %clearfix;
+    border-top: 1px solid #9a9a9a;
+    margin-top: $spacing-unit-v * 4;
+    padding-bottom: 1em;
+  }
 }

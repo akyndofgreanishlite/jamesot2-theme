@@ -54,6 +54,7 @@ layout: compress
     {% endif %}
   <!-- <h1>TITLE: {{ page.title }}</h1> -->
   {% for links in document  %}
+    {% if page.title != 'Index' %}
     {% if links.title == page.title %}
       {% unless forloop.first %}
         {% assign prevurl = prev.url %}
@@ -68,6 +69,7 @@ layout: compress
         {% assign nextclient = next.client %}
         {% assign nextdesc = next.description %}
       {% endunless %}
+    {% endif %}
     {% endif %}
     {% assign prev = links %}
   {% endfor %}
@@ -93,9 +95,11 @@ layout: compress
     {% endif %}
 
     <li>
-      <a class="button" href="/#projects">
+      <p>
+      <a class="button" href="/projects/">
         <span>View all projects</span>
       </a>
+      </p>
     </li>
   </ul>
 
@@ -113,9 +117,7 @@ document.body.onkeyup = function(e){
 
 </main>
 
-{% comment %}
 {% include footer.html %}
-{% endcomment %}
 
 </body>
 
