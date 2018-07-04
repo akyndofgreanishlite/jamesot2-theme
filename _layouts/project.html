@@ -9,13 +9,15 @@ layout: compress
 
 {% include head.html %}
 
-<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | handleize }} }}{% if page.project %}-{{ page.project | handleize }}{% endif %}">
+<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | slugify }} }}{% if page.project %}-{{ page.project | slugify }}{% endif %}">
 
 {% include header.html %}
 
+<a href="{{ "/projects/" | relative_url}}">Projects</a>
+
 <main class="page-content" aria-label="Content">
 
-<article class="project {{ page.client | downcase }}{% if page.project %}-{{ page.project }}{% endif %}">
+<article class="project {{ page.client | slugify }}{% if page.project %}-{{ page.project | slugify }}{% endif %}">
 
   <header class="">
     <div class="inner">
