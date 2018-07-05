@@ -9,4 +9,7 @@
     @extend %clearfix;
     margin-top: $spacing-unit-v * 2;
   }
+  .project-client {
+    margin-top: 0;
+  }
 }

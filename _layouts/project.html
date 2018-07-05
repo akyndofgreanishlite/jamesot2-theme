@@ -80,6 +80,7 @@ layout: compress
 
     {% if nexturl %}
     <li>
+      <hr>
       <p><span class="direction">Next project</span></p>
       <span class="project-client">{{ nextclient | escape }}</span>
       <h2><a class="project-link nxt" href="{{nexturl}}">{{ nexttitle | escape }}</a></h2>
@@ -88,15 +89,19 @@ layout: compress
     {% endif %}
 
     {% if prevurl %}
+    {% if prevtitle != 'index' %}
     <li>
+      <hr>
       <p><span class="direction">Previous project</span></p>
       <span class="project-client">{{ prevclient | escape }}</span>
       <h2><a href="{{prevurl}}" class="project-link prv">{{ prevtitle | escape }}</a></h2>
       <p>{{ prevdesc | escape }}</p>
     </li>
     {% endif %}
+    {% endif %}
 
     <li>
+      <hr>
       <p>
       <a class="button" href="/projects/">
         <span>View all projects</span>
