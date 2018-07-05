@@ -79,6 +79,7 @@ layout: compress
   <ul class="list-project">
 
     {% if nexturl %}
+    {% if project.description != 'index' %}
     <li>
       <hr>
       <p><span class="direction">Next project</span></p>
@@ -87,9 +88,10 @@ layout: compress
       <p>{{ nextdesc | escape }}</p>
     </li>
     {% endif %}
+    {% endif %}
 
     {% if prevurl %}
-    {% if prevtitle != 'index' %}
+    {% if project.description != 'index' %}
     <li>
       <hr>
       <p><span class="direction">Previous project</span></p>
