@@ -4,8 +4,13 @@
     margin-top: 0;
   }
 }
-.project-client + * {
-  margin-top: 0;
+.project-client {
+  display: block;
+  margin-top: $spacing-unit * 2;
+
+  & + * {
+    margin-top: 0;
+  }
 }
 
 .project .project-list {
