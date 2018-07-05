@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: default
+header: false
 ---
 # Welcome
 
