@@ -2,6 +2,7 @@ figure {
   @extend %clearfix;
   margin-left: auto;
   margin-right: auto;
+  margin-top: $spacing-unit-v * 4;
 }
 img {
   @extend %clearfix;
