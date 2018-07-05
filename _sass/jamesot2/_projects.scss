@@ -10,7 +10,7 @@
 
 .project .project-list {
   li {
-    border-top: 1px solid #9a9a9a;
+    border-top: 1px solid lightgray; // #9a9a9a;
     padding-bottom: 1em;
   }
   li:nth-child(n+2) {

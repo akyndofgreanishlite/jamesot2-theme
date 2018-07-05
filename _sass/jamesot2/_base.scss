@@ -8,8 +8,8 @@ html {
 
 body {
   font-family: $system-type;
-
   line-height: $base-line-height;
+  color: #646464;
 
   @media(min-width: 480px) {
     font-size: 1.125em;

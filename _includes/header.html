@@ -28,8 +28,8 @@
       <!-- </div> -->
       {% endcomment %}
 
-      {% if projects_link = 'true' %}
-      <a href="{{ "/projects/" | relative_url}}">Projects</a>
+      {% if page.client != blank %}
+      <a href="{{ "/projects/" | relative_url }}">Projects</a>
       {% endif %}
 
     </div>
