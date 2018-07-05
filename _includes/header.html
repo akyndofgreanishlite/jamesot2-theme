@@ -28,7 +28,7 @@
       <!-- </div> -->
       {% endcomment %}
 
-      {% if page.client != blank %}
+      {% if page.client != blank or header == true %}
       <a href="{{ "/projects/" | relative_url }}">Projects</a>
       {% endif %}
 
