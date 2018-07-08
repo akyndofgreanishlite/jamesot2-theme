@@ -2,6 +2,8 @@ header.global .inner {
   @extend %content-column;
   @extend %clearfix;
 
+  margin-top: 2 * $spacing-unit-v;
+
   a {
     & + a {
       margin-left: 1em;
