@@ -2,22 +2,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-h1 {
+h1, %h1 {
   // font-size: calc(6vw + 1rem);
   font-size: 2em;
+  font-weight: 800;
   line-height: 1.2;
 }
-h2 {
-
+h2, %h2 {
+  line-height: 1.4;
 }
-h3 {
+h3, %h3 {
   margin-top: 3 * 1em;
 
   & + h4 {
     margin-top: 1.33em;
   }
 }
-h4 {
+h4, %h4 {
   margin-top: 2 * 1.33em;
   margin-bottom: 1em;
 }

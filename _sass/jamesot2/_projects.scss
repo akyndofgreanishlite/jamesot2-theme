@@ -1,5 +1,7 @@
 .platform {
   margin-top: $spacing-unit-v * 2;
+  font-size: .9rem;
+  opacity: .6;
   & + * {
     margin-top: 0;
   }
@@ -7,12 +9,15 @@
 .project-client {
   display: block;
   margin-top: $spacing-unit * 2;
-
   & + * {
     margin-top: 0;
   }
 }
-
+header .project-client {
+  @extend %h1;
+  color: #333;
+  opacity: .6;
+}
 .project .project-list {
   li {
     border-top: 1px solid lightgray; // #9a9a9a;
