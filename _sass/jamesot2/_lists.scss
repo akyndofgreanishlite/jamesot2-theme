@@ -1,3 +1,7 @@
+ul, ol, dl {
+  padding-left: 1rem;
+}
+
 .list-simple {
   list-style: none;
   padding-left: 0;
@@ -10,7 +14,11 @@
     margin-top: $spacing-unit-v * 2;
   }
   .project-client {
-    // @extend %h2;
+    @extend %h3;
     margin-top: 0;
+    margin-bottom: 0;
+    & + * {
+      margin-top: 0;
+    }
   }
 }

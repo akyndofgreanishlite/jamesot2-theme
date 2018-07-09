@@ -9,7 +9,7 @@ body {
   line-height: $base-line-height;
   color: #646464;
   @media(min-width: 480px) {
-    font-size: 1.125em;
+    font-size: 1.15em; // 1.125em;
   }
 }
 main {
@@ -27,7 +27,7 @@ a, a:visited, a:active {
   }
 }
 a, a:active {
-  color: #889b4a;
+  color: #088644; // #889b4a;
 }
 a:visited {
   color: #088644;
