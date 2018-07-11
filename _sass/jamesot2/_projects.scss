@@ -15,11 +15,12 @@ $project-colors: (
   &.#{$project-name} {
     // header,
     header::after {
-      @if $project-color-4 {
-      background-color: $project-color-4;
-      } @else {
-      background-color: $project-color-1;
-      }
+      background-color: #fbfaf8;
+      // @if $project-color-4 {
+      // background-color: $project-color-4;
+      // } @else {
+      // background-color: $project-color-1;
+      // }
       background-image:
         // linear-gradient(rgba($project-color-1, .2) 20%,$project-color-1 80%),
         url(/assets/images/#{$project-name}/hero.jpg);
