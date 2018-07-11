@@ -10,7 +10,7 @@ body {
   line-height: $base-line-height;
   color: #646464;
   @media(min-width: 480px) {
-    font-size: 1.15em; // 1.125em;
+    font-size: 1.15rem; // 1.125em;
   }
 }
 main header > *, // May have to be for a more flexible article header: main header .inner > *
