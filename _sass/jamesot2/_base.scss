@@ -5,6 +5,7 @@ html {
   // background-color: red !important;
 }
 body {
+  margin: 0;
   font-family: 'National 2', $system-type;
   line-height: $base-line-height;
   color: #646464;
@@ -12,8 +13,10 @@ body {
     font-size: 1.15em; // 1.125em;
   }
 }
-main {
-  @extend %content-column;
+main header > *, // May have to be for a more flexible article header: main header .inner > *
+main section > *,
+main footer > * {
+  @extend %content-column-width;
 }
 hr {
   height: 1px;

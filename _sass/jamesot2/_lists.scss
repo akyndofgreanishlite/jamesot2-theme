@@ -1,12 +1,19 @@
-ul, ol, dl {
+ul, ol {
   padding-left: 1rem;
 }
-
+dl, dd {
+  margin-left: 0;
+}
+dt {
+  font-weight: 700;
+  &:nth-child(n+2) {
+    margin-top: $spacing-unit;
+  }
+}
 .list-simple {
   list-style: none;
   padding-left: 0;
 }
-
 .list-project {
   @extend .list-simple;
   li {

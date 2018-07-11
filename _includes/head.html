@@ -16,6 +16,7 @@
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   {% endcomment %}
+  <title>{% if page.client %}{{ page.client | escape }} {% endif %}{% if page.title %}{{ page.title | escape }} • {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   <meta content="{{ site.title | escape }}" name="og:site_name">
   <meta content="{{ site.title | escape }}" name="og:title">

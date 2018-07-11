@@ -1,6 +1,57 @@
+$project-colors: (
+  (adsnative, rgba(#39c2a6, .6), rgba(#39c2a6, .5), #222c36),
+  (localytics, rgba(74, 182, 129, .6), rgba(74, 182, 129, .5), #222c36),
+  (audible, rgba(#e8a500, .8), rgba(#e8a500, .2),
+    rgba(43, 31, 0, 1), #e8a500),
+  (alloy, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26), #212121),
+  (inkling-textbooks, rgba(0, 167, 126, .6), rgba(0, 167, 126, .5), rgb(28, 41, 38)),
+  (hooch, rgba(#5c432f, .6), rgba(#534716, 0), #210205, #5c432f),
+  (thomson-reuters, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26))
+  //(hooch, rgba(#548c55, .7), rgba(#548c55, .5), #210205)
+);
+
+.project {
+  @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
+  &.#{$project-name} {
+    // header,
+    header::after {
+      @if $project-color-4 {
+      background-color: $project-color-4;
+      } @else {
+      background-color: $project-color-1;
+      }
+      background-image:
+        // linear-gradient(rgba($project-color-1, .2) 20%,$project-color-1 80%),
+        url(/assets/images/#{$project-name}/hero.jpg);
+      background-image:
+        // linear-gradient(
+          // rgba($project-color-1, .2) 20%,$project-color-1 80%),
+        -webkit-image-set(
+          url(/assets/images/#{$project-name}/hero.webp) 1x,   url(/assets/images/#{$project-name}/hero@2x.webp) 2x,
+          url(/assets/images/#{$project-name}/hero.jpg) 1x,   url(/assets/images/#{$project-name}/hero@2x.jpg) 2x);
+      background-image:
+        // linear-gradient(
+          // rgba($project-color-1, .2) 20%,$project-color-1 80%),
+        image-set(
+          url(/assets/images/#{$project-name}/hero.jpg) 1x,   url(/assets/images/#{$project-name}/hero@2x.jpg) 2x,
+          url(/assets/images/#{$project-name}/hero.webp) 1x,   url(/assets/images/#{$project-name}/hero@2x.webp) 2x);
+      //   linear-gradient($project-color-1,$project-color-1);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  }
+  header::after {
+    display: block;
+    content: '';
+    width: 100%;
+    min-height: 36 * $spacing-unit-v;
+  }
+}
 .platform {
   margin-top: $spacing-unit-v * 2;
-  font-size: .9rem;
+  font-size: $font-scale-6;
   letter-spacing: .01rem;
   opacity: .7;
   & + * {
@@ -9,19 +60,21 @@
 }
 .project-client {
   // @extend %h3;
-
-
   // margin-bottom: 0;
-
 }
-header .project-client {
-  display: block;
-  margin-top: $spacing-unit * 2;
-  @extend %h1;
-  color: #333;
-  opacity: .7;
-  & + * {
-    margin-top: 0;
+header {
+  .inner {
+    padding-bottom: $spacing-unit-v;
+  }
+  .project-client {
+    display: block;
+    margin-top: $spacing-unit * 4;
+    @extend %h1;
+    color: #333;
+    opacity: .7;
+    & + * {
+      margin-top: 0;
+    }
   }
 }
 .project .project-list {

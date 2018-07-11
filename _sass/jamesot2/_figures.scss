@@ -1,21 +1,90 @@
-figure {
+figure, object {
   @extend %clearfix;
   margin-left: auto;
   margin-right: auto;
   margin-top: $spacing-unit-v * 4;
   margin-top: $spacing-unit-v * 3;
+  &.p-0 img {
+    padding: 0;
+    background-color: #fbfaf8; // #f1f1f1;
+  }
 }
 img {
   @extend %clearfix;
   display: block;
   width: auto;
   max-width: 100%;
+  // padding: 6vw;
+  background-color: #fbfaf8; // whitesmoke;
 }
 figcaption {
   display: block;
   text-align: center;
-  font-size: .9rem;
+  font-size: $font-scale-6;
   line-height: 1.4;
   letter-spacing: .01rem;
   opacity: .7;
+}
+figure.large {
+  width: $width-bleed-1;
+  max-width: none; // 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @media(min-width: 1680px) {
+    width: $width-bleed-2;
+  }
+  img {
+    display: inline-block;
+  }
+  figcaption {
+    // @extend %clearfix;
+    @extend %content-column-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+}
+figure.fullbleed {
+  width: 100vw;
+  max-width: none;
+  margin: 6vw 0;
+  padding: 12vw 6vw;
+  background-color: #fbfaf8; // wwhitesmoke;
+  & + .fullbleed {
+    margin-top: -24vw;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 64rem;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+  }
+  figcaption {
+    // @extend %clearfix;
+    @extend %content-column-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+figure.full {
+  img, object {
+    padding: 0;
+  }
+}
+figure.outlined {
+  img {
+    border: 1px solid #f2f2f2; // rgba(171, 173, 174, .25)
+    padding: 0;
+  }
+}
+figure.bg-fff {
+  background-color: #fff;
+}
+figure.bg-333 {
+  background-color: #333;
 }
