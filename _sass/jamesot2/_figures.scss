@@ -51,9 +51,9 @@ figure.fullbleed {
   margin: 6vw 0;
   padding: 6vw; // 12vw 6vw
   background-color: #fbfaf8; // wwhitesmoke;
-  & + .fullbleed {
-    margin-top: -24vw;
-  }
+  // & + .fullbleed {
+  //   margin-top: -24vw;
+  // }
   img {
     display: block;
     width: 100%;
