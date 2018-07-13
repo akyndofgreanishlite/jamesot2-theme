@@ -9,7 +9,16 @@ layout: compress
 
 {% include head.html %}
 
-<body class="{% if page.version %}{{ page.version}}{% endif %} {{ page.client | slugify }} }}{% if page.project %}-{{ page.project | slugify }}{% endif %}">
+<body class="
+  {% if page.version %}
+    {{ page.version}}
+  {% endif %}
+  {% if page.client %}
+    {{ page.client | slugify }}
+  {% endif %}
+  {% if page.project %}
+    {{ page.project | slugify }}
+  {% endif %}">
 
 {% include header.html %}
 
@@ -31,7 +40,11 @@ layout: compress
   </header>
 
   <section class="" itemprop="articleBody">
+
+    {% include tags.html %}
+
     {{ content }}
+
   </section>
 
   {% if meta %}
@@ -41,6 +54,7 @@ layout: compress
       <p>{{ meta.label }}: {{ meta.info }}</p>
     </li>
     {% endfor %}
+  </ul>
   {% endif %}
 
   {% if site.disqus.shortname %}
@@ -50,7 +64,7 @@ layout: compress
 </article>
 
 <footer class="project-navigation">
-  {% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% capture the_collection %}{{ page.collection }}{% endcapture %}
     {% if page.collection %}
       {% assign document = site[the_collection] | sort:'num'  %}
     {% endif %}
@@ -84,7 +98,7 @@ layout: compress
       <hr>
       <p><span class="direction">Next project</span></p>
       <span class="project-client">{{ nextclient | escape }}</span>
-      <h2><a class="project-link nxt" href="{{nexturl}}">{{ nexttitle | escape }}</a></h2>
+      <h2><a class="project-link nxt" href="{{ nexturl }}">{{ nexttitle | escape }}</a></h2>
       {% comment %}
       <p class="project-description">{{ nextdesc | escape }}</p>
       {% endcomment %}
@@ -98,7 +112,7 @@ layout: compress
       <hr>
       <p><span class="direction">Previous project</span></p>
       <span class="project-client">{{ prevclient | escape }}</span>
-      <h2><a href="{{prevurl}}" class="project-link prv">{{ prevtitle | escape }}</a></h2>
+      <h2><a href="{{ prevurl }}" class="project-link prv">{{ prevtitle | escape }}</a></h2>
       {% comment %}
       <p class="project-description">{{ prevdesc | escape }}</p>
       {% endcomment %}

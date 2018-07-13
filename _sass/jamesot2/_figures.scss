@@ -78,7 +78,8 @@ figure.full {
 }
 figure.outlined {
   img {
-    border: 1px solid #f2f2f2; // rgba(171, 173, 174, .25)
+    outline: 1px solid #f2f2f2; // rgba(171, 173, 174, .25)
+    outline-offset: -1px;
     padding: 0;
   }
 }

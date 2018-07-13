@@ -1,0 +1,10 @@
+{% if page.tags %}
+<h4>Responsibilities</h4>
+<ul class="project-tags">
+  {% for tag in tags %}
+  <li>
+    <p>{{ project.tag }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
