@@ -35,3 +35,10 @@ a, a:active {
 a:visited {
   color: #088644;
 }
+pre {
+  white-space: pre-wrap;
+  padding: (1.5 * $spacing-unit) (2 * $spacing-unit);
+  word-wrap: normal;
+  background-color: #fbfaf8;
+  border-radius: 4px;
+}
