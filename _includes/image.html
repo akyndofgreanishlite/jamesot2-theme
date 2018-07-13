@@ -23,7 +23,8 @@
 
   {% endif %}
 
-  {% if fig_cap.size != 0 %}
+  {% if fig_cap.size > 0 %}
+  {{ fig_cap.size }}
   <figcaption><p>{{ include.fig_cap }}</p></figcaption>
   {% endif %}
 

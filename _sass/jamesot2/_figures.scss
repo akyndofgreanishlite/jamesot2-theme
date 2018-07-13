@@ -19,11 +19,15 @@ img {
 }
 figcaption {
   display: block;
+  margin-bottom: $spacing-unit-v;
   text-align: center;
   font-size: $font-scale-6;
   line-height: 1.4;
   letter-spacing: .01rem;
   opacity: .7;
+  > *:only-child {
+    margin-bottom: 0;
+  }
 }
 figure.large {
   width: $width-bleed-1;
@@ -42,6 +46,7 @@ figure.large {
     @extend %content-column-width;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     // text-align: left;
   }
 }
@@ -68,6 +73,7 @@ figure.fullbleed {
     @extend %content-column-width;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     text-align: center;
   }
 }
