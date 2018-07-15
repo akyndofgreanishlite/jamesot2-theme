@@ -12,6 +12,9 @@
 
 <figure class="{{ include.fig_class | fullbleed }}">
 
+  {{ include.fig_cap | default:'' }}
+  {{ include.fig_cap.size }}
+
   {% if project.size != 0 %}
   <img srcset="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext2 | default:'webp' }} 1x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext2 | default:'webp' }} 2x" src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" alt="{{ include.img_alt | default:'' }}">
 
@@ -23,9 +26,10 @@
 
   {% endif %}
 
-  {% if fig_cap.size > 0 %}
-  {{ include.fig_cap }}
+  {{ include.fig_cap | default:'' }}
   {{ include.fig_cap.size }}
+
+  {% if fig_cap.size > 0 %}
   <figcaption><p>{{ include.fig_cap }}</p></figcaption>
   {% endif %}
 

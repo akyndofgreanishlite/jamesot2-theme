@@ -13,6 +13,9 @@ $project-colors: (
 ul, ol {
   padding-left: 2rem;
 }
+li:nth-child(n+2) {
+  margin-top: 1rem;
+}
 dl, dd {
   margin-left: 0;
 }

@@ -3,7 +3,7 @@ figure, object {
   margin-left: auto;
   margin-right: auto;
   margin-top: $spacing-unit-v * 4;
-  margin-top: $spacing-unit-v * 3;
+  margin-bottom: $spacing-unit-v * 4;
   &.p-0 img {
     padding: 0;
     background-color: #fbfaf8; // #f1f1f1;
@@ -16,6 +16,10 @@ img {
   max-width: 100%;
   // padding: 6vw;
   background-color: #fbfaf8; // whitesmoke;
+}
+p > img {
+  margin-top: $spacing-unit-v * 4;
+  margin-bottom: $spacing-unit-v * 4;
 }
 figcaption {
   display: block;

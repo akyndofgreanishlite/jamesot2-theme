@@ -44,11 +44,13 @@ h4, %h4 {
   margin-top: 2 * 1.33em;
   margin-bottom: 1em;
 }
-
-p strong {
-  color: #333;
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  strong {
+    color: #333;
+  }
 }
-
 .note {
   color: red;
 }

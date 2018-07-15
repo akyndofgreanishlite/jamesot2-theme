@@ -28,8 +28,8 @@ layout: compress
 
   <header class="">
     <div class="inner">
-      <span class="project-client">{{ page.client }}</span>
-      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <span class="project-client">{{ page.client | markdownify }}</span>
+      <h1 class="post-title" itemprop="name headline">{{ page.title | markdownify }}</h1>
       <!-- <p class="post-meta"></p> -->
       {% comment %}
       {% if page.description %}
