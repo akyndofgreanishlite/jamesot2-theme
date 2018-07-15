@@ -49,7 +49,7 @@ Well-implemented analytics help teams move more quickly, and should be high prio
 ## Sponsored Drinks
 In the past, companies like Diageo (Johnny Walker, Ciroc, Tanqueray) had to rely on brand ambassadors to hand collect a limited sample of customer demographics and behavior. We wanted to provide a broader and more reliable sample.
 
-{% include image.html fig_class="fullbleed" project='hooch' img_src='hooch-sponsored-drinks' img_alt='Hooch Sponsored Drinks' %}
+{% include image.html fig_class="fullbleed" project='hooch' img_src='hooch-sponsored-drinks' img_alt='Hooch Sponsored Drinks' fig_cap='Hooch Sponsored Drinks' %}
 
 #### Opportunities
 [How can we do x for y customers?]
