@@ -70,7 +70,6 @@ header {
   .project-client {
     display: block;
     margin-top: $spacing-unit * 4;
-    margin-bottom: -1rem;
     @extend %h1;
     color: #333;
     opacity: .7;
