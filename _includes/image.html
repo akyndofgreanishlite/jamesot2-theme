@@ -10,7 +10,7 @@
 
 {% assign project = 'hooch' %}
 
-<figure class="{{ include.fig_class | fullbleed }}">
+<figure class="{{ include.fig_class | fullbleed }}" {% if bg_color != 0 %} style="background-color: {{ bg_color }}" {% endif %}>
 
   {% comment %} Add conditional to cover if img_alt is null or empty {% endcomment %}
 

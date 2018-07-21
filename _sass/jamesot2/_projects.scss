@@ -78,15 +78,32 @@ header {
     }
   }
 }
-.project .project-list {
+.project .list-project {
   li {
-    border-top: 1px solid lightgray; // #9a9a9a;
+    // border-top: 1px solid lightgray; // #9a9a9a;
     padding-bottom: 1em;
+    @media (min-width: 480px) {
+      flex: 0 0 100%;
+      &:first-child {
+        flex: 0 0 100%;
+      }
+      // &:last-child {
+      //   flex: 0 0 100%;
+      // }
+    }
+    &::after {
+      background: none;
+      height: 0;
+      margin-top: 0;
+    }
   }
   li:nth-child(n+2) {
     // margin-top: $spacing-unit-v * 2;
   }
-  .project-client {
-    color: #333;
+  // .project-client {
+  //   color: #333;
+  // }
+  h2:nth-of-type(n+2) {
+    @extend %h3;
   }
 }

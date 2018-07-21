@@ -7,6 +7,24 @@ layout: compress
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
+
+  <body class="
+    {% if page.version %}
+      {{ page.version}}
+    {% endif %}
+    {% if page.client %}
+      {{ page.client | slugify }}
+    {% endif %}
+    {% if page.project %}
+      {{ page.project | slugify }}
+    {% endif %}
+    {% if page.body_class %}
+      {{ page.project | slugify }}
+    {% endif %}">
+
+  <h1>{{ include.body_class }}</h1>
+  <h1>{{ page.body_class }}</h1>
+
   {% include header.html %}
 
   <main>
@@ -14,6 +32,10 @@ layout: compress
     {{ content }}
 
   </main>
+
+  {% include footer.html %}
+
+  </body>
 
 </html>
 

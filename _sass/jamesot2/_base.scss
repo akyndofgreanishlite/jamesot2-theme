@@ -13,8 +13,8 @@ body {
     font-size: 1.15rem; // 1.125em;
   }
 }
-main header > *, // May have to be for a more flexible article header: main header .inner > *
-main section > *,
+article header > *, // May have to be for a more flexible article header: main header .inner > *
+article section > *,
 main footer > * {
   @extend %content-column-width;
 }

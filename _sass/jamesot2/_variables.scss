@@ -9,13 +9,14 @@ $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
 
-$font-scale-0: 5rem;
-$font-scale-1: 4rem;
-$font-scale-2: 3rem;
-$font-scale-3: 2rem;
-$font-scale-4: 1.325rem;
-$font-scale-5: 1rem;
-$font-scale-6: .9rem;
+$font-scale-0: 5rem; // 80/?
+$font-scale-1: 4rem; // 64/?
+$font-scale-2: 3rem; // 48/?
+$font-scale-3: 2rem; // 32/?
+$font-scale-4: 1.75rem; // 28/?
+$font-scale-5: 1.325rem; // 21/?
+$font-scale-6: 1rem; // 18/16
+$font-scale-7: 0.875rem; // 14/?
 
 $spacing-unit: 1rem;
 $spacing-unit-v: 2vh;
@@ -27,6 +28,13 @@ $width-bleed-2: 88vw;
 %content-column-width {
   width: 90%;
   max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%column-width-wide {
+  width: 90%;
+  max-width: none;
   margin-left: auto;
   margin-right: auto;
 }
