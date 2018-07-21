@@ -4,7 +4,7 @@ $project-colors: (
   (audible, rgba(#e8a500, .8), rgba(#e8a500, .2),
     rgba(43, 31, 0, 1), #e8a500),
   (alloy, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26), #212121),
-  (inkling-textbooks, rgba(0, 167, 126, .6), rgba(0, 167, 126, .5), rgb(28, 41, 38)),
+  (inkling, rgba(0, 167, 126, .6), rgba(0, 167, 126, .5), rgb(28, 41, 38)),
   (hooch, rgba(#5c432f, .6), rgba(#534716, 0), #210205, #5c432f),
   (thomson-reuters, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26))
   //(hooch, rgba(#548c55, .7), rgba(#548c55, .5), #210205)
@@ -121,5 +121,8 @@ $project-colors: (
         letter-spacing: $letter-spacing-1;
       }
     }
+  }
+  footer.global .inner {
+    @extend %column-width-wide;
   }
 }

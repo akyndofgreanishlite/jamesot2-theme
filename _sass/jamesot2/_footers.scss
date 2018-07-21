@@ -1,4 +1,10 @@
 footer.global .inner {
   @extend %content-column-width;
   @extend %clearfix;
+  margin-top: 2 * $spacing-unit-v;
+  margin-bottom: 2 * $spacing-unit-v;
+  p {
+    font-size: $font-scale-7;
+    opacity: .5;
+  }
 }
