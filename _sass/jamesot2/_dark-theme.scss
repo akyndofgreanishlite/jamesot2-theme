@@ -1,0 +1,13 @@
+.theme-dark,
+%theme-dark {
+  background-color: #171717;
+  h1, h2, h3, h4, h5 {
+    color: #fbfaf8;
+  }
+  p, small {
+    color: rgba(#fbfaf8, .8);
+  }
+  header.global {
+    background-color: #000000;
+  }
+}

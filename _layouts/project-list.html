@@ -1,0 +1,38 @@
+---
+layout: compress
+---
+
+{% capture html %}
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  {% include header.html %}
+
+  <body class="project-list
+    {% if page.version %}
+      {{ page.version}}
+    {% endif %}
+    {% if page.client %}
+      {{ page.client | slugify }}
+    {% endif %}
+    {% if page.project %}
+      {{ page.project | slugify }}
+    {% endif %}
+    {% if page.body_class %}
+      {{ page.project | slugify }}
+    {% endif %}">
+  <main>
+
+    {{ content }}
+
+  </main>
+
+  {% include footer.html %}
+
+  </body>
+
+</html>
+
+{% endcapture %}{{ html | strip_newlines | replace:'	','' | replace:'    ','' | replace:'  ',' ' }}
