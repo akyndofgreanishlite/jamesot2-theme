@@ -20,6 +20,19 @@
 @font-face {
   font-family: 'National 2';
   src:
+    url('fonts/National_2_Medium.woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'National 2';
+  src:
+    url('fonts/National_2_Medium_Italic.woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'National 2';
+  src:
     url('fonts/National_2_Bold.woff2');
   font-weight: 700;
 }
