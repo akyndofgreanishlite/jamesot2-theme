@@ -75,12 +75,21 @@ $project-colors: (
             }
           }
         }
+        @media (min-width: 720px) {
+          // flex: 0 0 45%;
+          &:first-child {
+            // flex: 0 0 100%;
+            &::before {
+              min-height: 32 * $spacing-unit-v;
+            }
+          }
+        }
         @media (min-width: 1280px) {
           // flex: 0 0 calc(90%/3);
           &:first-child {
             // flex: 0 0 100%;
             &::before {
-              min-height: 32 * $spacing-unit-v;
+              min-height: 48 * $spacing-unit-v;
             }
           }
         }
