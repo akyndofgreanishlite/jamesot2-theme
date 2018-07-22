@@ -68,10 +68,9 @@ layout: compress
 
 <footer class="project-navigation">
   {% capture the_collection %}{{ page.collection }}{% endcapture %}
-    {% if page.collection %}
-      {% assign document = site[the_collection] | sort:'num'  %}
-    {% endif %}
-  <!-- <h1>TITLE: {{ page.title }}</h1> -->
+  {% if page.collection %}
+    {% assign document = site[the_collection] | sort:'num'  %}
+  {% endif %}
   {% for links in document  %}
     {% if page.title != 'Index' %}
     {% if links.title == page.title %}
