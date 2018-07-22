@@ -14,7 +14,7 @@ $project-colors: (
   @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
   &.#{$project-name} {
     // header,
-    header::after {
+    article header::after {
       background-color: #fbfaf8;
       // @if $project-color-4 {
       // background-color: $project-color-4;
@@ -43,7 +43,7 @@ $project-colors: (
     }
   }
   }
-  header::after {
+  article header::after {
     display: block;
     content: '';
     width: 100%;
@@ -78,12 +78,7 @@ header {
     }
   }
 }
-.project {
-  background-color: red !important;
-}
-.project + ul.list-project,
-.project ul.list-project  {
-
+.project-navigation ul.list-project {
   display: block;
   grid-template-columns: repeat(1, 1fr);
   @media(min-width: 480px) {
@@ -110,6 +105,8 @@ header {
   }
   h2 {
     font-family: $display-type;
+    font-size: $font-scale-2;
+    line-height: 1;
     a {
       text-decoration: none;
       &:hover {

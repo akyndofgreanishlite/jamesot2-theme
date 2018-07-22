@@ -9,8 +9,7 @@ layout: compress
 
 {% include head.html %}
 
-<body class="project
-  {% if page.version %}
+<body class="project {% if page.version %}
     {{ page.version}}
   {% endif %}
   {% if page.client %}
