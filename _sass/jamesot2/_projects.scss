@@ -78,8 +78,12 @@ header {
     }
   }
 }
-.project ul.list-project {
+.project {
   background-color: red !important;
+}
+.project + ul.list-project,
+.project ul.list-project  {
+
   display: block;
   grid-template-columns: repeat(1, 1fr);
   @media(min-width: 480px) {
@@ -89,7 +93,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
   li {
-    display: block;
+    display: list-item;
     // border-top: 1px solid lightgray; // #9a9a9a;
     padding-bottom: 1em;
     @media(min-width: 480px) {
