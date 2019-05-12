@@ -18,6 +18,7 @@ $gradient-list: (
     margin-top: 0;
     position: sticky;
     top: 0;
+    max-width: 72rem;
     // padding-top: $spacing-unit-v / 4;
 
     .inner {
@@ -98,10 +99,16 @@ $gradient-list: (
     li {
       display: inline-block;
       margin-right: 4vw;
-      margin-top: 0 !important;
+      margin-top: 0;
 
       @media (min-width: 1024px) {
         display: block;
+        margin-top: 1rem;
+        margin-right: 0;
+
+        &:nth-child(n+2) {
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -114,7 +121,6 @@ a.social {
   width: 48px;
   border-radius: 24px;
   background-color: white;
-
   background-repeat: no-repeat;
   background-size: 28px;
   background-position: center;
