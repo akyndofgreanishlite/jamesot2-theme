@@ -18,7 +18,7 @@ $gradient-list: (
     margin-top: 0;
     position: sticky;
     top: 0;
-    max-width: 72rem;
+
     // padding-top: $spacing-unit-v / 4;
 
     .inner {
@@ -27,6 +27,7 @@ $gradient-list: (
       justify-content: space-between;
       margin-top: 0;
       padding-top: $spacing-unit-v;
+      max-width: 72rem;
     }
     a {
       color: white;
