@@ -52,7 +52,7 @@ $gradient-list: (
 
   section.description {
     // grid-column: 1 / 4;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -63,14 +63,13 @@ $gradient-list: (
 
     @media (min-width: 1024px) {
       grid-column: 1 / 4;
+      height: 80vh;
     }
   }
 
   section.social {
     // grid-column: 4 / 5;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+
 
     @media (min-width: 480px) {
       // grid-column: 2 / 3;
@@ -78,14 +77,23 @@ $gradient-list: (
 
     @media (min-width: 1024px) {
       grid-column: 4 / 5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
     }
 
     ul {
       list-style-type: none;
       padding-left: 0;
+      margin-top: 0;
     }
     li {
-      display: block;
+      display: inline-block;
+      margin-right: 4vw;
+
+      @media (min-width: 1024px) {
+        display: block;
+      }
     }
   }
 }
