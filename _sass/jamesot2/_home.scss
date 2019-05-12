@@ -53,6 +53,7 @@ $gradient-list: (
   section.description {
     // grid-column: 1 / 4;
     height: 70vh;
+    margin-top: $spacing-unit-v;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -64,6 +65,11 @@ $gradient-list: (
     @media (min-width: 1024px) {
       grid-column: 1 / 4;
       height: 80vh;
+      // margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 0;
     }
   }
 
@@ -90,6 +96,7 @@ $gradient-list: (
     li {
       display: inline-block;
       margin-right: 4vw;
+      margin-top: 0 !important;
 
       @media (min-width: 1024px) {
         display: block;
