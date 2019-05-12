@@ -6,4 +6,54 @@ $gradient-list: (
 );
 .home {
   font-family: $system-type !important;
+  background-color: #171717;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+
+  header.global {
+    // padding: $spacing-unit-v;
+    background-color: black;
+    margin-top: 0;
+    // padding-top: $spacing-unit-v / 4;
+
+    .inner {
+      display: flex;
+      // align-content: flex-start;
+      justify-content: space-between;
+      margin-top: 0;
+      padding-top: $spacing-unit-v;
+    }
+    a {
+      color: white;
+    }
+  }
+
+  main {
+    width: 90%;
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4vh 4vw;
+  }
+}
+
+
+
+.text {
+
+}
+
+
+.pull-right {
+  // align-self: flex-end;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-end;
 }
