@@ -57,10 +57,14 @@ $gradient-list: (
       list-style-type: none;
       padding-left: 0;
     }
+    li {
+      display: block;
+    }
   }
 }
 
-.social {
+
+a.social {
   display: block;
   height: 48px;
   width: 48px;
