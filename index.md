@@ -16,6 +16,7 @@ Some other text that might describe what you do.
 <section class="social">
 * <a class="social social--email" href="{{site.email}}"></a>
 * <a class="social social--linkedin" href="{{ site.linkedin_url }}"></a>
+* <a class="social social--angellist" href="{{ site.angellist_url }}"></a>
 * <a class="social social--vsco" href="{{ site.vsco_url }}"></a>
 </section>
 
