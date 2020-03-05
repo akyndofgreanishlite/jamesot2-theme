@@ -82,6 +82,9 @@ $gradient-list: (
 
     @media (min-width: 480px) {
       // grid-column: 2 / 3;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
     }
 
     @media (min-width: 1024px) {
