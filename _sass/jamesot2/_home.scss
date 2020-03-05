@@ -5,7 +5,7 @@ $gradient-list: (
   (grad4, #a68c7f, #4a2c38, #6f7998, #d3cdf3)
 );
 .home {
-  font-family: $system-type !important;
+  // font-family: $system-type !important;
   background-color: #171717;
 
   h1, h2, h3, h4, h5, h6 {
@@ -80,7 +80,6 @@ $gradient-list: (
   section.social {
     // grid-column: 4 / 5;
 
-
     @media (min-width: 480px) {
       // grid-column: 2 / 3;
     }
@@ -97,6 +96,7 @@ $gradient-list: (
       padding-left: 0;
       margin-top: 0;
     }
+
     li {
       display: inline-block;
       margin-right: 4vw;
@@ -115,7 +115,6 @@ $gradient-list: (
   }
 }
 
-
 a.social {
   display: block;
   height: 48px;
@@ -129,12 +128,15 @@ a.social {
   &.social--email {
     background-image: url(/assets/images/social/icon-email.svg);
   }
+
   &.social--linkedin {
     background-image: url(/assets/images/social/icon-linkedin.svg);
   }
+
   &.social--angellist {
     background-image: url(/assets/images/social/icon-angellist.svg);
   }
+
   &.social--vsco {
     background-image: url(/assets/images/social/icon-vsco.svg);
   }
