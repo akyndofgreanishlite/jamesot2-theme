@@ -13,7 +13,7 @@ header.global .inner {
     text-decoration: none;
     margin-left: 1em;
     margin-right: 1em;
-    flex: 1 0 auto;
+    
 
     &:hover {
       text-decoration: underline; 
@@ -26,5 +26,9 @@ header.global .inner {
     &:last-of-type {
       margin-right: 0;
     }
+  }
+
+  .site-title {
+    flex: 1 0 auto;
   }
 }
