@@ -29,8 +29,10 @@
       {% endcomment %}
 
       {% if page.client != blank or header == true %}
-      <a class="page-link" href="{{ "/projects/" | relative_url}}">Projects</a>
-      <a class="page-link" target="_blank" href="{{ site.resume_pdf }}">Resume</a>
+      <div class="">
+        <a class="page-link" href="{{ "/projects/" | relative_url}}">Projects</a>
+        <a class="page-link" target="_blank" href="{{ site.resume_pdf }}">Resume</a>
+      </div>
       {% endif %}
 
     </div>
