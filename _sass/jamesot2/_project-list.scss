@@ -83,6 +83,9 @@
           }
         }
       }
+      .tempo-automation::before {
+        background-position-x: right;
+      }
     }
     li:first-of-type {
       // display: flex;
