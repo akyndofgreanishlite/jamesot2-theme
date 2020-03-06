@@ -25,6 +25,7 @@
       @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
         &.#{$project-name} {
           &::before {
+            border-radius: 4px;
             background-image:
               // linear-gradient(rgba($project-color-1, .2) 20%,$project-color-1 80%),
               url(/assets/images/#{$project-name}/hero-thumb.jpg);
