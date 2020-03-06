@@ -55,6 +55,13 @@ ul.list-project {
       }
     }
   }
+  a {
+    // color: #FBFAF8;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   hr {
     margin-bottom: $spacing-unit;
   }

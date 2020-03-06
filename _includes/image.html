@@ -15,13 +15,37 @@
   {% comment %} Add conditional to cover if img_alt is null or empty {% endcomment %}
 
   {% if project.size != 0 %}
-  <img srcset="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext2 | default:'webp' }} 1x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext2 | default:'webp' }} 2x" src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" alt="{{ include.img_alt | default:'' }}">
+  <img 
+    srcset="
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x, 
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext2 | default:'webp' }} 1x, 
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext2 | default:'webp' }} 2x" 
+    src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
+    alt="{{ include.img_alt | default:'' }}" >
 
   {% elsif img_ext2 == 'none' %}
-  <img srcset="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x" src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" alt="{{ include.img_alt | default:'' }}">
+  <img 
+    srcset="
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
+      /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x" 
+    src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
+    alt="{{ include.img_alt | default:'' }}" >
+
+  {% elsif img_ext1 == 'svg' %}
+  <img 
+    src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'svg' }}" 
+    alt="{{ include.img_alt | default:'' }}" >
 
   {% else %}
-  <img srcset="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext1 | default:'jpg' }} 2x, /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext2 | default:'webp' }} 1x, /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" alt="{{ include.img_alt | default:'' }}">
+  <img 
+    srcset="
+      /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
+      /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext1 | default:'jpg' }} 2x, 
+      /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext2 | default:'webp' }} 1x, 
+      /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
+    src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
+    alt="{{ include.img_alt | default:'' }}" >
 
   {% endif %}
 
