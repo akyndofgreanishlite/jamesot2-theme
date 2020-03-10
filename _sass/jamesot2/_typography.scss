@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 
   }
 }
+
 h1, h2, h3 {
   -webkit-font-smoothing: antialiased;
 }
@@ -24,12 +25,14 @@ h1, %h1 {
     font-size: $font-scale-1;
   }
 }
+
 h2, %h2 {
   font-size: $font-scale-3;
   line-height: 1.4;
   margin-top: 4 * $spacing-unit;
   margin-bottom: $spacing-unit;
 }
+
 h3, %h3 {
   font-size: $font-scale-5;
   font-weight: 700;
@@ -40,17 +43,21 @@ h3, %h3 {
     margin-top: 1.33em;
   }
 }
+
 h4, %h4 {
   margin-top: 2 * 1.33em;
   margin-bottom: 1em;
 }
+
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  
   strong {
     color: #333;
   }
 }
+
 .note {
   color: red;
 }
