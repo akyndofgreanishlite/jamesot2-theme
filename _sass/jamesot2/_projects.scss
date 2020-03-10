@@ -125,6 +125,8 @@ header {
   }
 
   .project-client {
+    display: block;
+    margin-top: $spacing-unit-v * 2;
     font-size: $font-scale-7;
     font-weight: 500;
     text-transform: uppercase;
