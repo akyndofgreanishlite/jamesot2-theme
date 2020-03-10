@@ -51,6 +51,7 @@
     {% endif %}
 
   {% else %}
+  {% comment %}
   <img 
     srcset="
       /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
@@ -59,7 +60,7 @@
       /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
     src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
     alt="{{ include.img_alt | default:'' }}" >
-
+  {% endcomment %}
   {% endif %}
 
   {% comment %}
