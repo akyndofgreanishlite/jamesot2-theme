@@ -29,7 +29,7 @@
       src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
 
-    {% img_ext1 == 'png'}
+    {% elsif img_ext1 == 'png'}
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
