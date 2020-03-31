@@ -6,3 +6,4 @@ gemspec
 gem "jekyll-assets"
 gem "uglifier"
 gem "sass"
+gem "sprockets", "~> 3.7"
