@@ -1,9 +1,14 @@
-header.global .inner {
-  @extend %content-column-width;
-  @extend %clearfix;
-  margin-top: 2 * $spacing-unit-v;
-  display: flex;
-  justify-content: space-between;
+header.global {
+  // position: sticky;
+  // background-color: rgba(#171717, .7);
+
+  .inner {
+    @extend %content-column-width;
+    @extend %clearfix;
+    margin-top: 2 * $spacing-unit-v;
+    display: flex;
+    justify-content: space-between;
+  }
 
   a {
     text-decoration: none;

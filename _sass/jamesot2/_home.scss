@@ -15,10 +15,10 @@ $gradient-list: (
 
   header.global {
     // padding: $spacing-unit-v;
-    background-color: black;
-    margin-top: 0;
-    position: sticky;
-    top: 0;
+    // background-color: black;
+    // margin-top: 0;
+    // position: sticky;
+    // top: 0;
 
     // padding-top: $spacing-unit-v / 4;
 
@@ -33,6 +33,10 @@ $gradient-list: (
     
     a {
       color: white;
+    }
+
+    .site-title {
+      flex: 0 1 auto;
     }
   }
 
