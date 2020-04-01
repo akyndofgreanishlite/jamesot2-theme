@@ -13,22 +13,28 @@
 
 <figure 
   class="{{ include.fig_class | default:'fullbleed' }}" 
-  {% if bg_color.size != 0 %} 
-    style="background-color: {{ bg_color }};" 
+  {% if bg_color != nil %} 
+    style="background-color: {{ bg_color | default:'white' }};" 
   {% endif %}>
 
   {% comment %} 
     Add conditional to cover if img_alt is null or empty 
   {% endcomment %}
 
+  {{ project.name }}
   {{ project.size }}
   
   {{ img_ext1 }}
   {{ img_ext2 }}
 
   {% if project.size != 0 %}
-    <div>Project size is bigger than zero</div>
+    <div>Project size is not zero</div>
     {{ project.size }}
+    
+    {% if image.ext1 == 'png' %}
+      png me bro
+    {% endif %}
+
 
     {% if img_ext2 == 'none' %}
     {{ img_ext1 }}
@@ -54,6 +60,7 @@
 
     {% endif %}
 
+  {% comment %}
   {% else %}
   {{ img_ext1 }}
   {{ img_ext2 }}
@@ -67,6 +74,7 @@
       /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
     src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
     alt="{{ include.img_alt | default:'' }}" >
+  {% endcomment %}
   {% endif %}
 
   {% comment %}
@@ -92,7 +100,14 @@
 <!-- Old img code. -->
 <figure class="{{ include.fig_class }}">
   {% if project.size != 0 %}
-  <img srcset="/assets/images/{{ include.project }}/{{ include.img_src }}.png 1x, /assets/images/{{ include.project }}/{{ include.img_src }}@2x.png 2x, /assets/images/{{ include.project }}/{{ include.img_src }}.webp 1x, /assets/images/{{ include.project }}/{{ include.img_src }}@2x.webp 2x" src="/assets/images/{{ include.project }}/{{ include.img_src }}.png" alt="">
+  <img 
+    srcset="
+      /assets/images/{{ include.project }}/{{ include.img_src }}.png 1x, 
+      /assets/images/{{ include.project }}/{{ include.img_src }}@2x.png 2x, 
+      /assets/images/{{ include.project }}/{{ include.img_src }}.webp 1x, 
+      /assets/images/{{ include.project }}/{{ include.img_src }}@2x.webp 2x" 
+    src="/assets/images/{{ include.project }}/{{ include.img_src }}.png" 
+    alt="" >
 
   {% if fig_cap.size != 0 %}
   <figcaption><p>{{ include.fig_cap }}{{ include.img_ext1 }}</p></figcaption>
