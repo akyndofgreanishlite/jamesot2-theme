@@ -15,7 +15,7 @@ Hooch is a drink subscription service, focused on curating venues and drinks for
 
 I joined Hooch in April 2017 as their lead product designer, focusing first on their consumer-facing native app for iOS & Android.
 
-{% include image.html fig_class="fullbleed" project='hooch' img_src='hooch-basics' img_alt='Hooch Basics' %}
+{% include image.html fig_class="fullbleed" project='' img_src='sample' img_alt='Hooch Basics' %}
 
 
 
@@ -26,7 +26,7 @@ I joined Hooch in April 2017 as their lead product designer, focusing first on t
 
 To create a consistent experience, pay down product debt (design & tech), and ship faster to iOS and Android.
 
-{% include image.html fig_class="large p-0" project='hooch' img_src='inputs-and-buttons' img_alt='Hooch Design System' fig_cap='' %}
+{% include image.html fig_class='large p-0' project='hooch' img_src='sample' img_alt='Hooch Design System' fig_cap='' img_ext2='none' %}
 
 I mapped out all existing flows and thoroughly documented the design system for our remote dev team.
 
