@@ -72,14 +72,53 @@ $breakpoint-horzontal-2: 1024px;
 // );
 
 $project-colors: (
-  (adsnative, rgba(#39c2a6, .6), rgba(#39c2a6, .5), #222c36),
-  (localytics, rgba(74, 182, 129, .6), rgba(74, 182, 129, .5), #222c36),
-  (audible, rgba(#e8a500, .8), rgba(#e8a500, .2),
-    rgba(43, 31, 0, 1), #e8a500),
-  (alloy, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26), #212121),
-  (inkling, rgba(0, 167, 126, .6), rgba(0, 167, 126, .5), rgb(28, 41, 38)),
-  (hooch, rgba(#5c432f, .6), rgba(#534716, 0), #210205, #5c432f),
-  (thomson-reuters, rgba(55, 127, 214, .6), rgba(55, 127, 214, .5), rgb(26, 26, 26)),
+  (adsnative, 
+    rgba(#39c2a6, .6), 
+    rgba(#39c2a6, .5), 
+    #222c36,
+    #212121
+  ),
+  (localytics, 
+    rgba(74, 182, 129, .6), 
+    rgba(74, 182, 129, .5), 
+    #222c36,
+    #212121
+  ),
+  (audible, 
+    rgba(#e8a500, .8), 
+    rgba(#e8a500, .2),
+    rgba(43, 31, 0, 1), 
+    #e8a500
+  ),
+  (alloy, 
+    rgba(55, 127, 214, .6), 
+    rgba(55, 127, 214, .5), 
+    rgb(26, 26, 26), 
+    #212121
+  ),
+  (inkling, 
+    rgba(0, 167, 126, .6), 
+    rgba(0, 167, 126, .5), 
+    rgb(28, 41, 38),
+    #212121
+  ),
+  (hooch, 
+    rgba(#5c432f, .6), 
+    rgba(#534716, 0), 
+    #210205, 
+    #5c432f
+  ),
+  (thomson-reuters, 
+    rgba(55, 127, 214, .6), 
+    rgba(55, 127, 214, .5), 
+    rgb(26, 26, 26),
+    #212121
+  ),
   //(hooch, rgba(#548c55, .7), rgba(#548c55, .5), #210205),
-  (tempo-automation, rgba(#39c2a6, .6), rgba(#39c2a6, .5), #222c36)
+  (tempo-automation, 
+    rgba(#39c2a6, .6), 
+    rgba(#39c2a6, .5), 
+    #222c36,
+    #212121
+  )
 );

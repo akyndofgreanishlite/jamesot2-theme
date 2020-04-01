@@ -6,11 +6,16 @@
 {% assign img_ext2 = 'webp' %}
 {% assign img_alt = '' %}
 {% assign fig_cap = '' %}
+{% assign project = 'hooch' %}
 {% endcomment %}
 
-{% assign project = 'hooch' %}
 
-<figure class="{{ include.fig_class | fullbleed }}" {% if bg_color != 0 %} style="background-color: {{ bg_color }}" {% endif %}>
+
+<figure 
+  class="{{ include.fig_class | fullbleed }}" 
+  {% if bg_color.size != 0 %} 
+    style="background-color: {{ bg_color }}" 
+  {% endif %}>
 
   {% comment %} 
     Add conditional to cover if img_alt is null or empty 
@@ -21,35 +26,39 @@
   {{ img_ext1 }}
   {{ img_ext2 }}
 
-  {% if project.size > 0 %}
+  {% if project.size != 0 %}
+    <div>Project size is bigger than zero</div>
+    {{ project.size }}
 
-    {% if img_ext1 == 'svg' %}
-    <img 
-      src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'svg' }}" 
-      alt="{{ include.img_alt | default:'' }}" >
-
-    {% elsif img_ext2 == 'none' %}
+    {% if img_ext2 == 'none' %}
+    {{ img_ext1 }}
+    {{ img_ext2 }}
+    <div>img_ext2 == nil</div>
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x" 
       src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
-  
-      
 
-    {% else %}
+    {% elsif img_ext1 == 'png' %}
+    {{ img_ext1 }}
+    {{ img_ext2 }}
+    <div>img_ext1 == 'png'</div>
     <img 
       srcset="
-        /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
-        /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext1 | default:'jpg' }} 2x, 
-        /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext2 | default:'webp' }} 1x, 
-        /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
-      src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
+        /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
+        /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x" 
+      src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
+
     {% endif %}
 
   {% else %}
+  {{ img_ext1 }}
+  {{ img_ext2 }}
+  {{ project.size }}
+  <div>else project.size == 0</div>
   <img 
     srcset="
       /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
