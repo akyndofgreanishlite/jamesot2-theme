@@ -20,9 +20,6 @@
   {% comment %} 
     Add conditional to cover if img_alt is null or empty 
   {% endcomment %}
-  
-  {{ include.img_ext1 }}
-  {{ include.img_ext2 }}
 
   {% if project.size != 0 %}
     <div>Project size == {{ include.project.size }}</div>
@@ -33,13 +30,16 @@
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}@2x.{{ include.img_ext1 | default:'png' }} 2x" 
-      src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
-      alt="{{ include.img_alt | default:'' }}" >
+      src="
+        /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
+      {% if img_alt.size != 0 %}
+        alt="{{ include.img_alt | default:'' }}" 
+      {% endif %}
+    >
 
     {% elsif 
       include.img_ext1 == 'png' or 
       include.img_ext1 == 'jpg' %}
-    <div>img_ext1 == {{ include.img_ext1 }}</div>
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
@@ -48,7 +48,6 @@
       alt="{{ include.img_alt | default:'' }}" >
 
     {% elsif include.img_ext1 == 'svg' %}
-    <div>img_ext1 == {{ include.img_ext1 }}</div>
     <img 
       src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
@@ -56,7 +55,6 @@
     {% endif %}
 
   {% elsif project.size == 0 %}
-  <div>project.size == {{ project.size }}</div>
   <img 
     srcset="
       /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
