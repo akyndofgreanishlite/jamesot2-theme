@@ -20,26 +20,15 @@
   {% comment %} 
     Add conditional to cover if img_alt is null or empty 
   {% endcomment %}
-
-  {{ project.name }}
-  {{ project.size }}
   
-  {{ img_ext1 }}
-  {{ img_ext2 }}
+  {{ include.img_ext1 }}
+  {{ include.img_ext2 }}
 
   {% if project.size != 0 %}
-    <div>Project size is not zero</div>
-    {{ project.size }}
-    
-    {% if image.ext1 == 'png' %}
-      png me bro
-    {% endif %}
+    <div>Project size == {{ include.project.size }}</div>
 
-
-    {% if img_ext2 == 'none' %}
-    {{ img_ext1 }}
-    {{ img_ext2 }}
-    <div>img_ext2 == nil</div>
+    {% if include.img_ext2 == 'none' %}
+    <div>img_ext2 == {{ include.img_ext2 }}</div>
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
@@ -47,10 +36,10 @@
       src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
 
-    {% elsif img_ext1 == 'png' %}
-    {{ img_ext1 }}
-    {{ img_ext2 }}
-    <div>img_ext1 == 'png'</div>
+    {% elsif 
+      include.img_ext1 == 'png' or 
+      include.img_ext1 == 'jpg' %}
+    <div>img_ext1 == {{ include.img_ext1 }}</div>
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 
@@ -58,14 +47,16 @@
       src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
       alt="{{ include.img_alt | default:'' }}" >
 
+    {% elsif include.img_ext1 == 'svg' %}
+    <div>img_ext1 == {{ include.img_ext1 }}</div>
+    <img 
+      src="/assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }}" 
+      alt="{{ include.img_alt | default:'' }}" >
+
     {% endif %}
 
-  {% comment %}
-  {% else %}
-  {{ img_ext1 }}
-  {{ img_ext2 }}
-  {{ project.size }}
-  <div>else project.size == 0</div>
+  {% elsif project.size == 0 %}
+  <div>project.size == {{ project.size }}</div>
   <img 
     srcset="
       /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }} 1x, 
@@ -74,7 +65,7 @@
       /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
     src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
     alt="{{ include.img_alt | default:'' }}" >
-  {% endcomment %}
+
   {% endif %}
 
   {% comment %}
