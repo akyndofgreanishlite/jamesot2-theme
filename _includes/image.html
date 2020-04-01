@@ -12,9 +12,9 @@
 
 
 <figure 
-  class="{{ include.fig_class | fullbleed }}" 
+  class="{{ include.fig_class | default:'fullbleed' }}" 
   {% if bg_color.size != 0 %} 
-    style="background-color: {{ bg_color }}" 
+    style="background-color: {{ bg_color }};" 
   {% endif %}>
 
   {% comment %} 
