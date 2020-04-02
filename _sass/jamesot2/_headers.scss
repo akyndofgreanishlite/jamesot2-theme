@@ -29,6 +29,12 @@ header.global {
     }
   }
 
+  .pull-right {
+    flex: 1 0 auto;
+    justify-content: flex-end;
+    display: flex;
+  }
+
   .site-title {
     flex: 0 1 auto;
   }
