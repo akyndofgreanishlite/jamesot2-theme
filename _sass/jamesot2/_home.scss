@@ -26,17 +26,13 @@ $gradient-list: (
       display: flex;
       // align-content: flex-start;
       justify-content: space-between;
-      margin-top: 0;
-      padding-top: $spacing-unit-v;
+      // margin-top: 0;
+      // padding-top: $spacing-unit-v;
       max-width: 72rem;
     }
     
     a {
       color: white;
-    }
-
-    .site-title {
-      flex: 0 1 auto;
     }
   }
 
