@@ -9,17 +9,12 @@
 {% assign project = 'hooch' %}
 {% endcomment %}
 
-
-
 <figure 
   class="{{ include.fig_class | default:'fullbleed' }}" 
-  {% if bg_color != nil %} 
-    style="background-color: {{ bg_color | default:'white' }};" 
-  {% endif %}>
-
-  {% comment %} 
-    Add conditional to cover if img_alt is null or empty 
-  {% endcomment %}
+  {% if include.bg_color %} 
+    style="background-color: {{ include.bg_color }};" 
+  {% endif %}
+>
 
   {% if project.size != 0 %}
 
@@ -37,7 +32,8 @@
 
     {% elsif 
       include.img_ext1 == 'png' or 
-      include.img_ext1 == 'jpg' %}
+      include.img_ext1 == 'jpg' 
+    %}
     <img 
       srcset="
         /assets/images/{{ include.project }}/{{ include.img_src | default:'sample' }}.{{ include.img_ext1 | default:'png' }} 1x, 

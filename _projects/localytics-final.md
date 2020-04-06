@@ -19,7 +19,9 @@ I joined Hooch in April 2017 as their lead product designer, focusing first on t
   fig_class="fullbleed" 
   project='' 
   img_src='sample' 
-  img_alt='Hooch Basics' %}
+  img_alt='Hooch Basics' 
+  bg_color='green'
+%}
 
 
 {% include image.html 
