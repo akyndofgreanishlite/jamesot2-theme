@@ -1,8 +1,30 @@
 .project {
 
-  @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
+  @each $project-name, $project-color-1, $project-color-2, $project-color-3, $project-color-4 in $project-colors {
 
     &.#{$project-name} {
+
+      .bg-pc1 {
+        background-color: $project-color-1;
+      }
+
+      .bg-pc2 {
+        background-color: $project-color-2;
+      }
+
+      .bg-pc3 {
+        background-color: $project-color-3;
+      }
+
+      @if $project-color-4 {
+        .bg-pc4 {
+          background-color: $project-color-4;
+        }
+      }
+
+      a {
+        // color: $project-color-1;
+      }
       
       // header,
       article header::after {
@@ -40,6 +62,10 @@
     content: '';
     width: 100%;
     min-height: 36 * $spacing-unit-v;
+  }
+
+  a {
+
   }
 }
 

@@ -99,4 +99,8 @@ figure.bg-fff {
 }
 figure.bg-333 {
   background-color: #333;
+  
+  figcaption {
+    color: rgba(white,.7);
+  }
 }
