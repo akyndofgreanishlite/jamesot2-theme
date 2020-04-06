@@ -4,12 +4,13 @@ blockquote {
   // margin-left: 0;
   // padding-left: 40px;
 
-  background-color: #f9f8f6; // #fbfaf8; //  Could be #f9f8f6 for better constrast.
+  // background-color: #f9f8f6; // #fbfaf8; //  Could be #f9f8f6 for better constrast.
   padding-left: 0;
   border: none;
   padding: 1rem 1.5rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  border-left: 4px solid #f9f8f6;
 
   cite {
     display: block;
