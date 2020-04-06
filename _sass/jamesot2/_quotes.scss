@@ -10,4 +10,9 @@ blockquote {
   padding: 1rem 1.5rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
+
+  cite {
+    display: block;
+    margin-top: $spacing-unit-vertical;
+  }
 }
