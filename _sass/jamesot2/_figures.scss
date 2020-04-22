@@ -4,7 +4,7 @@ figure, object {
   margin-right: auto;
   margin-top: $spacing-unit-v * 4;
   margin-bottom: $spacing-unit-v * 4;
-  
+
   &.p-0 img {
     padding: 0;
     background-color: #fbfaf8; // #f1f1f1;
@@ -67,7 +67,7 @@ figure.large {
 figure.fullbleed {
   width: 100vw;
   max-width: none;
-  margin: 6vw 0;
+  margin: 8vw 0;
   padding: 6vw; // 12vw 6vw
   background-color: #fbfaf8; // wwhitesmoke;
 
