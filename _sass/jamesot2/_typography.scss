@@ -42,6 +42,10 @@ h3, %h3 {
   & + h4 {
     margin-top: 1.33em;
   }
+
+  & + blockquote {
+    margin-top: 2rem;
+  }
 }
 
 h4, %h4 {

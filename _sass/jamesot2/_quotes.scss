@@ -12,6 +12,10 @@ blockquote {
   margin-bottom: 4rem;
   border-left: 4px solid #f9f8f6;
 
+  & + blockquote {
+    margin-top: -2rem;
+  }
+
   cite {
     display: block;
     margin-top: $spacing-unit-v;
