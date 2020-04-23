@@ -16,7 +16,7 @@
 
   .list-project {
 
-    a {
+    .project-link {
       color: #FBFAF8;
       text-decoration: none;
       position: absolute;
@@ -24,7 +24,7 @@
       width: 100%;
       top: 0;
 
-      &:hover ~ h2 {
+      &:hover + .project-metadata h2 {
         text-decoration: underline;
       }
     }
