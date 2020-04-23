@@ -1,5 +1,6 @@
 .project-list {
   @extend %theme-dark;
+  position: relative;
 
   header .inner,
   main > * {
