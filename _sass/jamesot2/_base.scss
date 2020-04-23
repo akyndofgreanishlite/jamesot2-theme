@@ -1,9 +1,11 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 html {
   // background-color: red !important;
 }
+
 body {
   margin: 0;
   font-family: 'National 2', $system-type;
@@ -13,28 +15,34 @@ body {
     font-size: 1.15rem; // 1.125em;
   }
 }
+
 article header > *, // May have to be for a more flexible article header: main header .inner > *
 article section > *,
 main footer > * {
   @extend %content-column-width;
 }
+
 hr {
   height: 1px;
   margin-top: $spacing-unit-v * 4;
   border: none;
   background-color: lightgray;
 }
+
 a, a:visited, a:active {
   &:hover {
     text-decoration: none;
   }
 }
+
 a, a:active {
   color: #088644; // #889b4a;
 }
+
 a:visited {
   color: #088644;
 }
+
 pre {
   white-space: pre-wrap;
   padding: (1.5 * $spacing-unit) (2 * $spacing-unit);
