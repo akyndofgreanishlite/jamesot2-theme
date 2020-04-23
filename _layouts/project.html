@@ -95,7 +95,7 @@ layout: compress
 
     {% if nexturl %}
     {% if nextdesc != 'index' %}
-    <li>
+    <li class="{{ nextclient | escape }}">
       <hr>
       <a class="project-link nxt" href="{{ nexturl }}"></a>
       <div class="project-metadata">
@@ -118,7 +118,7 @@ layout: compress
 
     {% if prevurl %}
     {% if prevdesc != 'index' %}
-    <li>
+    <li class="{{ prevclient | escape }}">
       <hr>
       <a href="{{ prevurl }}" class="project-link prv"></a>
       <div class="project-metadata"></div>

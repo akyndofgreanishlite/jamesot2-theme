@@ -43,6 +43,42 @@ ul.list-project {
     margin-top: $spacing-unit-v * 2;
     position: relative;
 
+    @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
+
+      &.#{$project-name} {
+
+        &::before {
+          border-radius: 4px;
+          background-image:
+            // linear-gradient(rgba($project-color-1, .2) 20%,$project-color-1 80%),
+            url(/assets/images/#{$project-name}/hero-thumb.jpg);
+          background-image:
+            // linear-gradient(
+              // rgba($project-color-1, .2) 20%,$project-color-1 80%),
+            -webkit-image-set(
+              url(/assets/images/#{$project-name}/hero-thumb.webp) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.webp) 2x,
+              url(/assets/images/#{$project-name}/hero-thumb.jpg) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.jpg) 2x);
+          background-image:
+            // linear-gradient(
+              // rgba($project-color-1, .2) 20%,$project-color-1 80%),
+            image-set(
+              url(/assets/images/#{$project-name}/hero-thumb.jpg) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.jpg) 2x,
+              url(/assets/images/#{$project-name}/hero-thumb.webp) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.webp) 2x);
+            //   linear-gradient($project-color-1,$project-color-1);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          min-height: 14 * $spacing-unit-v;
+          margin-bottom: $spacing-unit * 2;
+        }
+      }
+
     &:last-child {
       margin-bottom: 0;
     }
