@@ -12,7 +12,7 @@ body {
   font-family: 'National 2', $system-type;
   line-height: $base-line-height;
   color: #646464;
-  
+
   @media(min-width: 480px) {
     font-size: 1.15rem; // 1.125em;
   }
@@ -37,12 +37,8 @@ a, a:visited, a:active {
   }
 }
 
-a, a:active {
+a, a:active, a:visited {
   color: #088644; // #889b4a;
-}
-
-a:visited {
-  color: #088644;
 }
 
 pre {
