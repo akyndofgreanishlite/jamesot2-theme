@@ -33,6 +33,7 @@ ul.list-trend {
   .trend-up::before, .trend-down::before {
     position: absolute;
     left: -24px;
+    color: #333;
   }
 
   .trend-up::before {
