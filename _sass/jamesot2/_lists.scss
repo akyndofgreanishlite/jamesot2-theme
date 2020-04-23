@@ -78,6 +78,7 @@ ul.list-project {
           margin-bottom: $spacing-unit * 2;
         }
       }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -124,12 +125,7 @@ ul.list-project {
   }
 
   a {
-    // color: #FBFAF8;
     text-decoration: none;
-
-    &:hover {
-      // text-decoration: underline;
-    }
   }
 
   hr {

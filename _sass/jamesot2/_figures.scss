@@ -69,7 +69,7 @@ figure.fullbleed {
   max-width: none;
   margin: 8vw 0;
   padding: 6vw; // 12vw 6vw
-  background-color: #fbfaf8; // wwhitesmoke;
+  background-color: #fbfaf8;
 
   & + .fullbleed {
     margin-top: $spacing-unit-v * -4;

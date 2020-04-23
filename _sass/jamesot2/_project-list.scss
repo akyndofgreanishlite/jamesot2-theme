@@ -127,19 +127,9 @@
         font-family: $display-type;
       }
 
-      @media (min-width: 1280px) {
-        // flex-direction: row;
-        // justify-content: space-between;
-        // align-items: center;
+      // @media (min-width: 1280px) {
 
-        &::before {
-          // flex: 0 0 ((90% / 3) * 2);
-        }
-
-        .project-metadata {
-          // flex: 0 0 (90% / 3);
-        }
-      }
+      // }
     }
 
     li:nth-of-type(n+2) {
