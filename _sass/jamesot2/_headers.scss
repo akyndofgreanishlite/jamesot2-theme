@@ -1,13 +1,16 @@
 header.global {
-  // position: sticky;
-  // background-color: rgba(#171717, .7);
+  position: sticky;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(#171717, .8);
 
   .inner {
     @extend %content-column-width;
     @extend %clearfix;
-    margin-top: 2 * $spacing-unit-v;
+    margin: 2 * $spacing-unit-v auto;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 0;
   }
 
   a {

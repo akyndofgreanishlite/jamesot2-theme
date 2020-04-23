@@ -1,4 +1,5 @@
 .project {
+  margin-top: $spacing-unit-v * 4;
 
   @each $project-name, $project-color-1, $project-color-2, $project-color-3, $project-color-4 in $project-colors {
 
@@ -143,7 +144,7 @@ header {
 
   .project-client {
     display: block;
-    margin-top: $spacing-unit-v * 2;
+    margin-top: 0;
     font-family: $display-type;
     font-size: $font-scale-2;
     line-height: 1;

@@ -7,10 +7,12 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'National 2', $system-type;
   line-height: $base-line-height;
   color: #646464;
+  
   @media(min-width: 480px) {
     font-size: 1.15rem; // 1.125em;
   }
@@ -24,7 +26,7 @@ main footer > * {
 
 hr {
   height: 1px;
-  margin-top: $spacing-unit-v * 12;
+  margin-top: $spacing-unit-v * 4;
   border: none;
   background-color: lightgray;
 }

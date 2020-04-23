@@ -1,0 +1,31 @@
+.button {
+  height: 48px;
+  padding: 0 16px;
+}
+
+a.social {
+  display: block;
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: center;
+
+  &.social--email {
+    background-image: url(/assets/images/social/icon-email.svg);
+  }
+
+  &.social--linkedin {
+    background-image: url(/assets/images/social/icon-linkedin.svg);
+  }
+
+  &.social--angellist {
+    background-image: url(/assets/images/social/icon-angellist.svg);
+  }
+
+  &.social--vsco {
+    background-image: url(/assets/images/social/icon-vsco.svg);
+  }
+}
