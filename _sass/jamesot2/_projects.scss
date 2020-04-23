@@ -58,6 +58,10 @@
     width: 100%;
     min-height: 36 * $spacing-unit-v;
   }
+
+  hr {
+    margin-top: $spacing-unit-v * 12;
+  }
 }
 
 .platform {
