@@ -72,7 +72,7 @@ figure.fullbleed {
   background-color: #fbfaf8; // wwhitesmoke;
 
   & + .fullbleed {
-    margin-top: -6vw;
+    margin-top: $spacing-unit-v * -4;
   }
 
   img {
