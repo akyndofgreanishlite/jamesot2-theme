@@ -17,20 +17,28 @@ body_class: project-list
     {% for project in projects_sorted %}
     {% if project.description != 'index' %}
       <li>
-        {% comment %}
-        {% include image.html fig_class='' project='localytics' img_src='2-2013-to-2014' img_ext1='png' img_alt='Coolest image' fig_cap='' %}
-        {% endcomment %}
+        <a class="project-link" href="{{ project.url | relative_url }}">
 
-        <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
-        <span class="project-client">{{ project.client | escape }}</span>
-        <h2>
-          <a class="project-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
-        </h2>
+          {% comment %}
+          {% include image.html fig_class='' project='localytics' img_src='2-2013-to-2014' img_ext1='png' img_alt='Coolest image' fig_cap='' %}
+          {% endcomment %}
 
-        {% if project.description %}
-        <p class="project-description">{{ project.description | escape }}</p>
-        {% endif %}
+          {% comment %}
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          {% endcomment %}
 
+          <span class="project-client">
+            {{ project.client | escape }}
+          </span>
+          <h2>
+            {{ project.title | escape }}
+          </h2>
+
+          {% if project.description %}
+          <p class="project-description">{{ project.description | escape }}</p>
+          {% endif %}
+
+        </a>
       </li>
     {% endif %}
     {% endfor %}
