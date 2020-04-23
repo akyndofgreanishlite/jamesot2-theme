@@ -17,6 +17,7 @@
 .button-icon {
   @extend %button;
   min-width: 56px;
+  padding-left: 56px;
   background-repeat: no-repeat;
   background-size: 28px;
   background-position: 14px 14px;
