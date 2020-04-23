@@ -68,7 +68,7 @@ figure.fullbleed {
   width: 100vw;
   max-width: none;
   margin: 8vw 0;
-  padding: 6vw; // 12vw 6vw
+  padding: 6vw;
   background-color: #fbfaf8;
 
   & + .fullbleed {
@@ -104,7 +104,7 @@ figure.full {
 
 figure.outlined {
   img {
-    outline: 1px solid #f2f2f2; // rgba(171, 173, 174, .25)
+    outline: 1px solid #f2f2f2;
     outline-offset: -1px;
     padding: 0;
   }
@@ -118,6 +118,6 @@ figure.bg-333 {
   background-color: #333;
   
   figcaption {
-    color: rgba(white,.7);
+    color: rgba(white, .7);
   }
 }
