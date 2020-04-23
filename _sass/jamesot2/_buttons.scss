@@ -14,10 +14,34 @@
   }
 }
 
-a.social {
-  display: block;
+.button-icon {
   @extend %button;
-  width: 48px;
+  min-width: 48px;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: 10px 10px;
+
+  &.social--email {
+    background-image: url(/assets/images/social/icon-email.svg);
+  }
+
+  &.social--linkedin {
+    background-image: url(/assets/images/social/icon-linkedin.svg);
+  }
+
+  &.social--angellist {
+    background-image: url(/assets/images/social/icon-angellist.svg);
+  }
+
+  &.social--vsco {
+    background-image: url(/assets/images/social/icon-vsco.svg);
+  }
+}
+
+a.social {
+  // display: block;
+  @extend %button;
+  min-width: 48px;
   background-repeat: no-repeat;
   background-size: 28px;
   background-position: center;
