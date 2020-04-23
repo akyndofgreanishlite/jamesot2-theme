@@ -57,6 +57,10 @@
 
   article {
     margin-top: $spacing-unit-v * 4;
+
+    hr {
+      margin-top: $spacing-unit-v * 12;
+    }
   }
 
   article header::after {
@@ -64,10 +68,6 @@
     content: '';
     width: 100%;
     min-height: 36 * $spacing-unit-v;
-  }
-
-  hr {
-    margin-top: $spacing-unit-v * 12;
   }
 }
 
