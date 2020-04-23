@@ -23,6 +23,27 @@ ul.list-simple {
   padding-left: 0;
 }
 
+ul.list-trend {
+  list-style: none;
+
+  li {
+    position: relative;
+  }
+
+  .trend-up::before, .trend-down::before {
+    position: absolute;
+    left: -32px;
+  }
+
+  .trend-up::before {
+    content:'↗';
+  }
+
+  .trend-down::before {
+    content:'↘';
+  }
+}
+
 ul.list-project {
   @extend .list-simple;
   display: grid;
