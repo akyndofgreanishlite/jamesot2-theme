@@ -35,6 +35,7 @@
 
     li {
       position: relative;
+      margin-top: $spacing-unit;
 
       @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
 
@@ -68,7 +69,6 @@
             display: block;
             width: 100%;
             min-height: 14 * $spacing-unit-v;
-            margin-top: $spacing-unit;
             margin-bottom: $spacing-unit * 2;
           }
         }
