@@ -19,8 +19,12 @@
     a {
       color: #FBFAF8;
       text-decoration: none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
 
-      &:hover h2 {
+      &:hover ~ h2 {
         text-decoration: underline;
       }
     }
@@ -30,6 +34,8 @@
     }
 
     li {
+      position: relative;
+
       @each $project-name,$project-color-1,$project-color-2,$project-color-3,$project-color-4 in $project-colors {
 
         &.#{$project-name} {
