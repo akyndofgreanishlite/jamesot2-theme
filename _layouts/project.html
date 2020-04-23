@@ -98,7 +98,7 @@ layout: compress
     <li>
       <hr>
       <a class="project-link nxt" href="{{ nexturl }}"></a>
-      <div class="project-metadata"></div>
+      <div class="project-metadata">
         <p>
           <span class="direction">Next project</span>
         </p>
@@ -120,12 +120,21 @@ layout: compress
     {% if prevdesc != 'index' %}
     <li>
       <hr>
-      <p><span class="direction">Previous project</span></p>
-      <span class="project-client">{{ prevclient | escape }}</span>
-      <h2><a href="{{ prevurl }}" class="project-link prv">{{ prevtitle | escape }}</a></h2>
-      {% comment %}
-      <p class="project-description">{{ prevdesc | escape }}</p>
-      {% endcomment %}
+      <a href="{{ prevurl }}" class="project-link prv"></a>
+      <div class="project-metadata"></div>
+        <p>
+          <span class="direction">
+            Previous project
+          </span>
+        </p>
+        <span class="project-client">
+          {{ prevclient | escape }}
+        </span>
+        <h2>{{ prevtitle | escape }}</a></h2>
+        <p class="project-description">
+          {{ prevdesc | escape }}
+        </p>
+      <</div>
     </li>
     {% endif %}
     {% endif %}
