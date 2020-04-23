@@ -2,7 +2,7 @@ header.global {
   position: sticky;
   top: 0;
   overflow: auto;
-  background-color: rgba(#171717, .8);
+  background-color: rgba(#171717, .9);
 
   .inner {
     @extend %content-column-width;
