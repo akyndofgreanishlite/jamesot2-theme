@@ -72,7 +72,7 @@ figure.fullbleed {
   background-color: #fbfaf8;
 
   & + .fullbleed {
-    margin-top: $spacing-unit-v * -4;
+    margin-top: -8vw;
   }
 
   img {
