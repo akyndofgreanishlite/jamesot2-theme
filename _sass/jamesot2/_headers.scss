@@ -1,6 +1,7 @@
 header.global {
   position: sticky;
   top: 0;
+  z-index: 1000;
   overflow: auto;
   background-color: rgba(#171717, .9);
 
