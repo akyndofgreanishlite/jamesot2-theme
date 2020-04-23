@@ -68,15 +68,15 @@ a.social {
     margin-right: $spacing-unit-h;
   }
 
-  @media (min-width: 480px) {
-    a {
-      margin-bottom: $spacing-unit-h;
-      margin-right: 0;
-    }
-  }
+  // @media (min-width: 480px) {
+  //   a {
+  //     margin-bottom: $spacing-unit-h;
+  //     margin-right: 0;
+  //   }
+  // }
 
-  @media (min-width: 1024px) {
-    margin-bottom: 0;
-    margin-right: $spacing-unit-h;
-  }
+  // @media (min-width: 1024px) {
+  //   margin-bottom: 0;
+  //   margin-right: $spacing-unit-h;
+  // }
 }
