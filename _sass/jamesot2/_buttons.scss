@@ -65,19 +65,9 @@ a.social {
 }
 
 .button-set {
+  display: flex;
+
   a {
     margin-right: $spacing-unit-h / 2;
   }
-
-  // @media (min-width: 480px) {
-  //   a {
-  //     margin-bottom: $spacing-unit-h;
-  //     margin-right: 0;
-  //   }
-  // }
-
-  // @media (min-width: 1024px) {
-  //   margin-bottom: 0;
-  //   margin-right: $spacing-unit-h;
-  // }
 }
