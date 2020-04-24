@@ -66,11 +66,15 @@ a.social {
 
 .button-set {
   ul {
-    @extend %list-simple;
     display: flex;
+    @extend %list-simple;
   }
 
   li {
     margin-right: $spacing-unit-h / 2;
+
+    &:nth-child(n+2) {
+      margin-top: 0;
+    }
   }
 }
