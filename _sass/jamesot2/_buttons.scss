@@ -65,7 +65,10 @@ a.social {
 }
 
 .button-set {
-  display: flex;
+  ul {
+    @extend %list-simple;
+    display: flex;
+  }
 
   li {
     margin-right: $spacing-unit-h / 2;
