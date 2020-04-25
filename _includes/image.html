@@ -56,7 +56,8 @@
       /assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext2 | default:'webp' }} 1x, 
       /assets/images/{{ include.img_src | default:'sample' }}@2x.{{ img_ext2| default:'webp' }} 2x" 
     src="/assets/images/{{ include.img_src | default:'sample' }}.{{ img_ext1 | default:'jpg' }}" 
-    alt="{{ include.img_alt | default:'' }}" >
+    alt="{{ include.img_alt | default:'' }}" 
+  >
 
   {% endif %}
 
@@ -72,7 +73,12 @@
   {% endcomment %}
 
   {% if include.fig_cap.size != 0 %}
-  <figcaption><p>{{ include.fig_cap }}</p></figcaption>
+  {{ include.fig_cap.size }}
+  <figcaption>
+    <p>
+      {{ include.fig_cap }}
+    </p>
+  </figcaption>
   {% endif %}
 
 </figure>
@@ -81,18 +87,23 @@
 <!-- Old img code. -->
 <figure class="{{ include.fig_class }}">
   {% if project.size != 0 %}
-  <img 
-    srcset="
-      /assets/images/{{ include.project }}/{{ include.img_src }}.png 1x, 
-      /assets/images/{{ include.project }}/{{ include.img_src }}@2x.png 2x, 
-      /assets/images/{{ include.project }}/{{ include.img_src }}.webp 1x, 
-      /assets/images/{{ include.project }}/{{ include.img_src }}@2x.webp 2x" 
-    src="/assets/images/{{ include.project }}/{{ include.img_src }}.png" 
-    alt="" >
+    <img 
+      srcset="
+        /assets/images/{{ include.project }}/{{ include.img_src }}.png 1x, 
+        /assets/images/{{ include.project }}/{{ include.img_src }}@2x.png 2x, 
+        /assets/images/{{ include.project }}/{{ include.img_src }}.webp 1x, 
+        /assets/images/{{ include.project }}/{{ include.img_src }}@2x.webp 2x" 
+      src="/assets/images/{{ include.project }}/{{ include.img_src }}.png" 
+      alt="" >
 
-  {% if fig_cap.size != 0 %}
-  <figcaption><p>{{ include.fig_cap }}{{ include.img_ext1 }}</p></figcaption>
-  {% endif %}
+    {% if fig_cap.size != 0 %}
+    {{ include.fig_cap.size }}
+      <figcaption>
+        <p>
+          {{ include.fig_cap }}
+        </p>
+      </figcaption>
+    {% endif %}
   {% endif %}
 </figure>
 
