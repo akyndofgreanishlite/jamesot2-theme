@@ -77,7 +77,7 @@
   {% if include.fig_cap.size != 0 %}
   <figcaption>
     <p>
-      {{ include.fig_cap }}
+      {{ include.fig_cap | default:'' }}
     </p>
   </figcaption>
   {% endif %}
