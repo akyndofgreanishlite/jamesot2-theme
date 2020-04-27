@@ -51,7 +51,7 @@ ul.list-trend {
 }
 
 ul.list-tags {
-  margin-top: 6vw;
+  margin-top: $spacing-unit;
   padding-left: 0;
   list-style: none;
   font-size: $font-scale-7;
@@ -60,7 +60,7 @@ ul.list-tags {
     display: inline-block;
     margin-top: $spacing-unit;
     margin-right: $spacing-unit / 4;
-    padding: 4px 16px;
+    padding: 2px 8px;
     border-radius: 48px;
     color: #088644;
     background-color: #e6f3ec;
