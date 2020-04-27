@@ -122,6 +122,10 @@ figure.bg-333 {
   }
 }
 
+figure.mono img {
+  filter: saturate(0);
+}
+
 .tempo-automation figure {
   background-color: #EAEFF0;
 }
