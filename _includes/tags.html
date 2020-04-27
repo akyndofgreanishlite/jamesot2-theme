@@ -1,4 +1,4 @@
-{% if post.tags.size > 0 %}
+{% if post.tags.size != 0 %}
 
 Tags: {{ post.tags | sort | join: ", " }}
 
