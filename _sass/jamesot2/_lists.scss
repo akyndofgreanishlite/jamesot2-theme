@@ -46,6 +46,23 @@ ul.list-trend {
   }
 }
 
+ul.list-tags {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    border-radius: 48px
+    color: #088644;
+    background-color: rgba(#088644, .1);
+  }
+
+  li.tool {
+    background-color: white;
+    border: 1px solid rgba(#646464, .5);
+  }
+
+}
+
 ul.list-project {
   @extend .list-simple;
   display: grid;
