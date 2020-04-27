@@ -110,20 +110,26 @@ figure.outlined {
   }
 }
 
-figure.bg-fff {
-  background-color: #fff;
-}
-
-figure.bg-333 {
-  background-color: #333;
-  
-  figcaption {
-    color: rgba(white, .7);
+figure{
+  &.bg-default {
+    background-color: #fbfaf8;
   }
-}
 
-figure.mono img {
-  filter: saturate(0);
+  &.bg-fff {
+    background-color: #fff;
+  }
+
+  &.bg-333 {
+    background-color: #333;
+    
+    figcaption {
+      color: rgba(white, .7);
+    }
+  }
+
+  &.mono img {
+    filter: saturate(0);
+  }
 }
 
 .tempo-automation figure {
