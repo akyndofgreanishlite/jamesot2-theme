@@ -11,6 +11,7 @@ blockquote {
   margin-top: 4rem;
   margin-bottom: 4rem;
   border-left: 4px solid #f9f8f6;
+  font-size: $font-scale-5;
 
   & + blockquote {
     margin-top: -2rem;
@@ -19,5 +20,6 @@ blockquote {
   cite {
     display: block;
     margin-top: $spacing-unit-v;
+    font-size: $font-scale-6;
   }
 }
