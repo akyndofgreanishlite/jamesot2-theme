@@ -3,20 +3,20 @@
 
     &.#{$project-name} {
 
-      .bg-pc1 {
+      .pbg-1 {
         background-color: $project-color-1;
       }
 
-      .bg-pc2 {
+      .pbg-2 {
         background-color: $project-color-2;
       }
 
-      .bg-pc3 {
+      .pbg-3 {
         background-color: $project-color-3;
       }
 
       @if $project-color-4 {
-        .bg-pc4 {
+        .pbg-4 {
           background-color: $project-color-4;
         }
       }

@@ -25,7 +25,9 @@ blockquote {
 }
 
 .tempo-automation blockquote {
-  color: #3e5152;
+  p {
+    color: #3e5152;
+  }
 
   cite {
     color: #646464;
