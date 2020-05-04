@@ -2,8 +2,8 @@ figure, object {
   @extend %clearfix;
   margin-left: auto;
   margin-right: auto;
-  margin-top: $spacing-unit-v * 4;
-  margin-bottom: $spacing-unit-v * 4;
+  margin-top: $spacing-unit-v * 8;
+  margin-bottom: $spacing-unit-v * 8;
 
   &.p-0 img {
     padding: 0;
