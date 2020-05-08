@@ -2,45 +2,68 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1"
+  >
 
   <meta name="robots" content="noindex">
 
-  <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}?{{site.time | date: '%s%N'}}">
+  <link 
+    rel="stylesheet" 
+    href="{{ "/assets/styles.css" | relative_url }}?{{site.time | date: '%s%N'}}"
+  >
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <link rel="icon" type="image/png"
-    href="{{ "/assets/favicon-16x16.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="16x16">
-  <link rel="icon" type="image/png"
-    href="{{ "/assets/favicon-32x32.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="32x32">
-  <link rel="icon" type="image/png"
-    href="{{ "/assets/favicon-96x96.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="96x96">
+  <link 
+    rel="icon" type="image/png"
+    href="{{ "/assets/favicon-16x16.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="16x16"
+  >
+  <link 
+    rel="icon" 
+    type="image/png"
+    href="{{ "/assets/favicon-32x32.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="32x32"
+  >
+  <link 
+    rel="icon" 
+    type="image/png"
+    href="{{ "/assets/favicon-96x96.png" | relative_url }}?{{site.time | date: '%s%N'}}" sizes="96x96"
+  >
 
   <title>
-    {% if page.client %}
-      {{ site.title | escape }} · {{ page.client | escape }}
-    {% elsif page.title %}
-      {{ site.title | escape }} · {{ page.title | escape }}
-    {% else %}
-      {{ site.title | escape }}
-    {% endif %}
+  {% if page.client %}
+    {{ site.title | escape }} · {{ page.client | escape }}
+  {% elsif page.title %}
+    {{ site.title | escape }} · {{ page.title | escape }}
+  {% else %}
+    {{ site.title | escape }}
+  {% endif %}
   </title>
 
   <meta content="{{ site.title | escape }}" name="og:site_name">
   <meta content="{{ site.title | escape }}" name="og:title">
-  <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" name="og:url">
+  <meta 
+    content="{{ page.url | replace:'index.html','' | absolute_url }}" 
+    name="og:url"
+  >
   <meta content="{{ site.description }}" name="og:description">
   <meta content="website" name="og:type">
   <meta content="" name="og:image">
   <meta content="summary" name="twitter:card">
   <meta content="{{ site.twitter_username }}" name="twitter:site">
   <meta content="{{ site.title }}" name="twitter:title">
-  <meta content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" name="twitter:description">
-  <meta content="{{ "/assets/images/placeholder.jpg" | relative_url }}" name="twitter:image">
+  <meta 
+    content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" 
+    name="twitter:description"
+  >
+  <meta 
+    content="{{ "/assets/images/placeholder.jpg" | relative_url }}" 
+    name="twitter:image"
+  >
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
-  {% include google-analytics.html %}
+    {% include google-analytics.html %}
   {% endif %}
 
 </head>
