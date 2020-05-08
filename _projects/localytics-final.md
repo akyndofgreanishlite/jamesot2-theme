@@ -1,5 +1,5 @@
 ---
-title: "An final project that has this title"
+title: "A final project that has this title"
 date: 2017-07-04 19:46:00 Z
 permalink: "/projects/localytics-final/"
 num: 1
