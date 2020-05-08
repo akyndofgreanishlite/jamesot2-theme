@@ -41,5 +41,9 @@ header.global {
 
   .site-title {
     flex: 0 1 auto;
+
+    &:active, &:visited {
+      color: #333; // #889b4a;
+    }
   }
 }

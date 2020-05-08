@@ -75,7 +75,7 @@
                   url(/assets/images/#{$project-name}/hero-thumb.png) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.png) 2x,
                   url(/assets/images/#{$project-name}/hero-thumb.webp) 1x,   url(/assets/images/#{$project-name}/hero-thumb@2x.webp) 2x);
                 //   linear-gradient($project-color-1,$project-color-1);
-              background-size: cover;
+              background-size: contain;
               background-repeat: no-repeat;
               background-position: center;
             }
