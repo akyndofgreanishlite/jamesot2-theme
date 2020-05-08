@@ -34,7 +34,13 @@ a, a:visited, a:active {
 }
 
 a, a:active, a:visited {
-  color: #088644; // #889b4a;
+  color: #333; // #889b4a;
+}
+
+p, li {
+  a, a:active, a:visited {
+    text-decoration: underline;
+  }
 }
 
 pre {
