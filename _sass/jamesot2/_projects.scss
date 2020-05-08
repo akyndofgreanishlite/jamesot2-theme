@@ -25,9 +25,9 @@
         article header::after {
           
           @if $project-color-4 {
-          background-color: $project-color-4;
+            background-color: $project-color-4;
           } @else if $project-color-1 {
-          background-color: $project-color-1;
+            background-color: $project-color-1;
           } @else {
             background-color: #fbfaf8;
           }
