@@ -62,9 +62,9 @@ ul.list-tags {
     margin-right: $spacing-unit / 4;
     padding: 2px 8px;
     border-radius: 48px;
-    color: #088644;
-    background-color: #e6f3ec;
-    border: 2px solid #e6f3ec;
+    color: #333;
+    background-color: rgba(#646464, .25);
+    border: 2px solid rgba(#646464, .25);
   }
 
   li.tool {
