@@ -8,12 +8,8 @@
 
   </div>
 
-  {% if jekyll.environment != 'production' %}
-  <script src="{{ "/assets/scripts/jquery.min.js" | relative_url }}"></script>
-  {% endif %}
-
   {% if jekyll.environment == 'production' %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   {% endif %}
   {% if jekyll.environment != 'production' %}
   <script src="{{ "/assets/scripts/lightbox.js" | relative_url }}"></script>
